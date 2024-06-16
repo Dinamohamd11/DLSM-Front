@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Offers</title>
+</head>
+
+<body class="position-relative">
+
+    <button class="btn btn ToHome d-none" id="ToHome"><i class="fa-solid fa-up"></i></button>
+    <!-- NAVBAR-->
+    <navbar id="Nav-Bar">
+
+    </navbar>
+    <!-- </NAVBAR> -->
+
+    <section class="header-center ">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-lg-4  col-md-2 col-sm-3">
+                    <div class="icon alone d-flex justify-content-start  ">
+                        <div class="dropdown">
+                            <button class="btn border-0" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="" class="search"> <i class="fa-light fa-bars"></i></a>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="home.html">Home</a></li>
+                                <li><a class="dropdown-item" href="shop-filter.html">Shop</a></li>
+                                <li><a class="dropdown-item" href="product.html">Product</a></li>
+                                <li><a class="dropdown-item" href="blog.html ">Blog</a></li>
+                                <li><a class="dropdown-item" href="blog-detail.html">Blog-Detail</a></li>
+                                <li><a class="dropdown-item" href="about.us.html">About us</a></li>
+                                <li><a class="dropdown-item" href="login.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6 col-sm-6 text-center">
+                    <div class="imglogo ">
+                        <a href="home.html">
+                            <img src="/Image/main1-logo-sml-dark.png" alt="noni">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2 col-sm-3 text-end">
+                    <a href="" class="glass"><i class="fa-solid fa-magnifying-glass "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- COMMON -->
+    <section class="common">
+        <div class="container">
+            <div class="text air ps-5">
+                <h2>Offers</h2>
+                <ul class="d-flex p-2">
+                    <li>
+                        <a href="../../components/home/index.html"><span>Home</span></a>
+                        <i class="fa-light fa-angles-right"></i>
+                    </li>
+                    <li>Make an offer</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- </COMMON> -->
+    <!-- Offers -->
+    <div class="offers login">
+        <div class="signin "></div>
+        <div class="layer pb-5 pt-5">
+            <div class="container">
+                <div class="Alloffer rounded-4">
+                    <div class="row justify-content-center" id="HeaderRequest">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="inputs pt-5">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form class="d-flex">
+                            <div class="col-lg-6">
+                                <label>From</label>
+                                <input type="text" name="From" id="From" placeholder="From">
+                                <label>Price</label>
+                                <input type="number" name="Price" id="Price" placeholder="Price">
+
+                                <label>TT</label>
+                                <input type="number" name="TT" id="TT" placeholder="TT">
+
+                                <label>FT</label>
+                                <input type="number" name="FT" id="FT" placeholder="FT">
+
+                                <label>OF</label>
+                                <input type="number" name="OF" id="OF" placeholder="OF">
+
+                                <label>Trucking Price</label>
+                                <input type="number" id="TruckingPrice" placeholder="TruckingPrice">
+
+                                <h6 class="comment text-start">Comment </h6>
+                                <textarea name="Comment" id="Comment" class="form-control rounded-0"
+                                    placeholder="Comment" style="height: 109px; "></textarea>
+
+
+                                <button class="btnAll mt-5 " type="button" onclick="SendOffer()">Send Offer</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>To</label>
+                                <input type="text" name="To" id="To" placeholder="To">
+                                <label>PL</label>
+                                <input type="number" name="PL" id="PL" placeholder="PL">
+
+                                <label>THC</label>
+                                <input type="number" name="THC" id="THC" placeholder="THC">
+
+                                <label>Power Per Day</label>
+                                <input type="number" name="PowerPerDay" id="PowerPerDay" placeholder="Power Per Day">
+
+                                <label>ExtraFees</label>
+                                <input type="number" name="ExtraFees" id="ExtraFees" placeholder="ExtraFees">
+                                <label>Customs Price</label>
+                                <input type="number" id="CustomsPrice" placeholder="CustomsPrice">
+
+
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- </Offers> -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/navbar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+</html>

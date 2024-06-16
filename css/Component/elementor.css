@@ -1,0 +1,38 @@
+.elementor .elementor-divider {
+    position: relative;
+}
+.elementor .elementor-divider::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: -3px;
+    width: 100px;
+    border-bottom: solid #e73237 2px;
+    font-weight: 600;
+    text-align: center;
+}
+.elementor .elementor-divider::after {
+    animation: heading-move 6s infinite linear;
+    content: "❯❯";
+    color: #d70006;
+    position: absolute;
+    left: -58px;
+    right: 24px;
+    top: -13px;
+    font-size: 17px;
+    letter-spacing: 3px;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+@keyframes heading-move {
+    0% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(75px);
+    }
+    100% {
+        transform: translateX(-5px);
+    }
+}

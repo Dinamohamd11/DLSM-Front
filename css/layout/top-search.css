@@ -1,0 +1,72 @@
+.topsearcsh {
+    background-color: #0f1b24;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    z-index: 9999999999999999;
+    transition: all 0.5s;
+}
+
+.topsearcsh input {
+    color: white;
+    width: 50%;
+    border: none;
+    padding: 15px 0;
+    border-bottom: solid red;
+    background-color: #0f1b24;
+}
+
+.topsearcsh input::placeholder {
+    color: #fff;
+}
+
+.topsearcsh input:focus-visible {
+    outline: none !important;
+    border-bottom: solid red;
+}
+
+.topsearcsh i {
+    color: #fff;
+}
+
+.topsearcsh .table-search {
+    top: 160px;
+    left: 348px;
+    width: 46.8%;
+}
+
+.topsearcsh .table-search li {
+    background-color: #0f1b24;
+    text-align: start;
+    color: white;
+    border-radius: 0;
+    border-color: #2c343a;
+}
+
+.topsearcsh .table-search li:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.topsearcsh button {
+    position: relative;
+    bottom: 57px;
+    left: 360px;
+    border-radius: 58px;
+    width: 2%;
+    border-left: dashed 3px #fffbfb;
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-right: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+
+.topsearcsh .botton-search-new {
+    left: -47px;
+    bottom: -3px;
+    background: transparent;
+    border: none;
+}

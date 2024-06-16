@@ -1,0 +1,7 @@
+.cardRequest .cardReq .giveOffer button {
+    margin: 10px;
+    transition: all 0.6s;
+}
+.cardRequest .cardReq button:hover {
+    background-color: #2c3c48 !important;
+}

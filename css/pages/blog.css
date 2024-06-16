@@ -1,0 +1,213 @@
+.search .btn input {
+    width: 100%;
+    border: 1px solid #eaeaea;
+
+    padding: 11px 19px;
+}
+.search .btn i {
+    right: 36px;
+    position: relative;
+    font-size: larger;
+}
+.search .btn {
+    /* padding-left: 0px; */
+    border: none;
+}
+.search .btn i:hover {
+    color: #c59d5f;
+}
+[type="search"] {
+    outline-offset: 0px !important;
+}
+.search .btn button {
+    color: #ffffff;
+    background-color: #d70006;
+    border: none;
+    width: 40%;
+    transition: all 0.5s;
+}
+.search .btn button:hover {
+    color: #ffffff;
+    background-color: #0f1b24;
+}
+
+.search .btn input:focus-within {
+    border-color: #d70006 !important;
+    outline: none;
+}
+.blog .left {
+    background-color: rgb(254, 248, 248);
+    width: 84%;
+    margin-bottom: 40px;
+}
+.blog .blogitem {
+    box-shadow: 0 12px 10px rgb(238 239 240 / 25%);
+    border-radius: 0;
+    border: 1px solid #f2f5fa;
+}
+.blogdetails {
+    border-top: 1px dashed #eaeaea;
+    margin-top: 26px;
+    padding-top: 33px;
+}
+.blog .Btop a::after {
+    content: "❯";
+    transition: all 0.3s;
+    padding: 7px;
+}
+.blog .icons {
+    background: rgb(254, 248, 248);
+    padding: 4px 9px;
+}
+.blog .icons i {
+    padding: 0 10px;
+}
+.blog .Btop a {
+    color: #d70006;
+    font-family: "Nunito-700";
+    transition: all 0.6s;
+}
+.blog .Btop a:hover {
+    color: #0f1b24;
+}
+.blog .blogchild {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+    transform: skewX(-22deg);
+    background-color: #d70006;
+    padding: 8px;
+}
+.blog .blogimg {
+    position: relative;
+}
+.blog .blogthems {
+    transform: skewX(22deg);
+    color: white;
+    padding: 2px 24px;
+    font-family: "Nunito-500";
+}
+.blog .blogthems i {
+    padding: 0 5px;
+}
+.blog .icons i:hover {
+    color: red;
+}
+.blog .blogstyle .blogText p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #797979;
+}
+.blog .blogstyle .blogText h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 46px;
+}
+.blog .ps-5 {
+    padding-right: 15px;
+}
+.blog .btn {
+    width: 95%;
+    padding: 29px;
+}
+.blog .box h2 {
+    font-size: 24px;
+    line-height: 42px;
+    margin-top: -20px;
+    padding: 14px 0px;
+}
+.blog .box .textBox {
+    position: relative;
+}
+
+.blog .box .textBox h2::before {
+    content: "";
+    height: 4px;
+    width: 50px;
+    border-radius: 0;
+    position: absolute;
+    left: 1px;
+    background-color: #d70006;
+    top: 70px;
+    transform: skewX(-43deg);
+    margin-top: -9px;
+    -webkit-transform: skewX(-43deg);
+}
+.blog .posts .imgpost img {
+    width: 70px;
+}
+.blog .posts .time {
+    padding: 0px 19px;
+    margin-bottom: 5px;
+    display: inline-block;
+    letter-spacing: -0.2px;
+    color: black;
+    font-family: "Nunito-700";
+}
+.blog .posts .time a {
+    color: #000;
+    transition: all 0.5s;
+}
+.blog .posts .time a:hover {
+    color: #d70006;
+}
+.blog .posts .time .timeicon i {
+    color: #d70006;
+    font-size: 13px;
+}
+.blog .posts .timeicon span {
+    font-family: "Nunito-900";
+    color: #797979;
+    font-size: 16px;
+}
+.blog .category .list ul {
+    padding-left: 0 !important;
+    padding-right: 39px;
+}
+.blog .category .list i {
+    font-size: 12px;
+    color: #d70006;
+}
+.blog .category .list li {
+    line-height: 3rem;
+}
+.blog .category .list .Bottomline {
+    border-bottom: dashed 1px #f5c6c7;
+}
+.blog .category .list a {
+    color: #000;
+    font-family: "Nunito-700";
+    font-size: 16px;
+    padding: 0 4px;
+    transition: all 0.4s;
+}
+.blog .category .list a:hover {
+    color: #d70006;
+}
+.blog .popular span {
+    transform: skewX(-22deg);
+    background-color: #d70006;
+    margin: 12px 4px;
+    padding: 4px 0px;
+}
+.blog .popular span a {
+    transform: skewX(22deg);
+    color: white;
+    padding: 2px 16px;
+    font-family: "Nunito-500";
+}
+.blog .popular span:hover {
+    background-color: #0f1b24;
+}
+.blog .popular .de {
+    transform: skewX(22deg);
+    padding: 2px 3px;
+}
+.blog .btnSearch {
+    background-color: red;
+}
+.search textarea:focus-within {
+    border-color: #d70006 !important;
+    outline: none;
+}

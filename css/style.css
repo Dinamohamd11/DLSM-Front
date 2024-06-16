@@ -1,0 +1,44 @@
+/*Base*/
+@import url(Base/base.css);
+/* vendors */
+@import url(Vendors/all.min.css);
+@import url(Vendors/bootstrap.min.css);
+@import url(Vendors/webfonts/);
+/*Component*/
+@import url(Component/elementor.css);
+@import url(Component/content.css);
+/* Layout */
+@import url(layout/header.css);
+@import url(layout/footer.css);
+@import url(layout/nav.css);
+
+/* Pages */
+@import url(pages/login.css);
+@import url(pages/register.css);
+@import url(pages/index.css);
+@import url(pages/reqinternational.css);
+@import url(pages/reqlocal.css);
+@import url(pages/reqdhl.css);
+@import url(pages/air.css);
+@import url(pages/blog.css);
+@import url(pages/admin.css);
+@import url(pages/blogDetails.css);
+@import url(pages/offers.css);
+@import url(pages/allRequest.css);
+@import url(pages/myprofile.css);
+@import url(pages/agent.css);
+@import url(pages/AllOffers.css);
+@import url(pages/process.css);
+@import url(pages/timeline.css);
+
+/* Responsive */
+@import url(Responsive/login.css);
+@import url(Responsive/register.css);
+@import url(Responsive/reqlocal.css);
+@import url(Responsive/reqinternational.css);
+@import url(Responsive/reqdhl.css);
+@import url(Responsive/index.css);
+@import url(Responsive/air.css);
+
+
+@import url(layout/top-search.css);

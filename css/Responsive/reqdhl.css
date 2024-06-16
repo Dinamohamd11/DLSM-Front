@@ -1,0 +1,5 @@
+@media screen and (max-width: 768px) {
+    .dhl .box .form input {
+        width: 100%;
+    }
+}

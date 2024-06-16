@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Admin</title>
+</head>
+
+<body>
+    <section class="admin">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="adminlist">
+                        <div class="adminimg">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="txt text-uppercase">
+                            <a href="">Admin</a>
+                            <div class="list pt-5">
+                                <ul>
+
+                                    <li>
+                                        <i class="fa-solid fa-industry"></i>
+                                        <h5 onclick="Factory()">Factory</h5>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                        <h5 onclick="Shipping()">Shipping</h5>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-truck"></i>
+                                        <h5 onclick="Clients()">Clients</h5>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-plane"></i>
+                                        <h5 onclick="ExportImport()">Export-Import</h5>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-code-pull-request"></i>
+                                        <h5 onclick="Requests()">Request</h5>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-plane"></i>
+                                        <h5 onclick="Offers()">Offers</h5>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        <a href="../../components/login/login.html">
+                                            <h5>Logout</h5>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="scrollme" id="scrollme">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="admin.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+</html>

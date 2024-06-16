@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Nunito-400";
+    src: url(../fonts/NunitoSans/NunitoSans_7pt_Expanded-Regular-400.ttf);
+}
+@font-face {
+    font-family: "Nunito-500";
+    src: url(../fonts/NunitoSans/NunitoSans_7pt_Condensed-Medium-500.ttf);
+}
+@font-face {
+    font-family: "Nunito-700";
+    src: url(../fonts/NunitoSans/NunitoSans_7pt_Condensed-Bold-700.ttf);
+}
+@font-face {
+    font-family: "Dm-700";
+    src: url(../fonts/DM-Sans/DMSans_18pt-Bold-700.ttf);
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- <section class="profile">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="rgb(255,255,255)" fill-opacity="1"
+                d="M0,32L24,74.7C48,117,96,203,144,208C192,213,240,139,288,122.7C336,107,384,149,432,170.7C480,192,528,192,576,181.3C624,171,672,149,720,128C768,107,816,85,864,85.3C912,85,960,107,1008,101.3C1056,96,1104,64,1152,69.3C1200,75,1248,117,1296,144C1344,171,1392,181,1416,186.7L1440,192L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
+            </path>
+        </svg>
+        <div class="layer">
+            <img src="../../Image/main-slider-shape-2-1.png">
+            <div class="heading">
+                <h2>Tracking</h2>
+
+            </div>
+        </div>
+    </section> -->
+    <!-- COMMON -->
+    <section class="common">
+        <div class="container">
+            <div class="text ps-5">
+                <h2>Tracking</h2>
+                <ul class="d-flex p-2">
+                    <li>
+                        <a href="../../components/home/index.html"><span>Home</span></a>
+                        <i class="fa-light fa-angles-right"></i>
+                    </li>
+                    <li>Tracking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- </COMMON> -->
+    <div class="deliverd">
+        <div class="container">
+            <div class="text text-center">
+                <h2>How We Deliver</h2>
+                <h2 class="spe">Your Parcel</h2>
+            </div>
+            <div class="deliverd-img">
+                <img src="../../Image/Line.svg">
+            </div>
+            <div class="row" id="roow">
+                <div class="col-lg-2">
+                    <div class="box one">
+                        <div class="icon active" onclick="Deliver('updateBooking')">
+                            <i class="fa-solid fa-calendar-check "></i>
+                        </div>
+                        <div class="heading">
+                            <h6>Booking</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="box two">
+                        <div class="icon active" onclick="Deliver('updateLoading')">
+                            <i class="fa-solid fa-spinner "></i>
+                        </div>
+                        <div class="heading">
+                            <h6>Loading</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="box three">
+                        <div class="icon active" onclick="Deliver('updateTrucking')">
+                            <i class="fa-solid fa-truck-moving "></i>
+                        </div>
+                        <div class="heading">
+                            <h6>Trucking </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="box four">
+                        <div class="icon active" onclick="Deliver('updateCustom_clearance')">
+                            <i class="fa-regular fa-file-zipper "></i>
+                        </div>
+                        <div class="heading">
+                            <h6>Custom clearance</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="box five">
+                        <div class="icon" onclick="Deliver('updateDone')">
+                            <i class="fa-regular fa-circle-check"></i>
+                        </div>
+                        <div class="heading">
+                            <h6>Done</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="box six">
+                        <div class="icon" onclick="Deliver('updateOn_trip')">
+                            <i class="fa-solid fa-truck-arrow-right"></i>
+                        </div>
+                        <div class="heading">
+                            <h6>On trip</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="option d-flex justify-content-center ">
+                    <div class="imgg rounded-5">
+                        <div class="layer rounded-5">
+                            <h5>Your feedBack is important to us</h5>
+                            <div class="rating text-center">
+                                <i class="rating__star far fa-star" id="s1"></i>
+                                <i class="rating__star far fa-star" id="s2"></i>
+                                <i class="rating__star far fa-star" id="s3"></i>
+                            </div>
+                            <div class="feedBack pb-5 " id="MsgFeedBack">
+                                <textarea name="Comment" class="form-control rounded-0" placeholder="Feedback"
+                                    style="height: 109px;"></textarea>
+                            </div>
+                            <div class="sendFeedback text-center">
+                                <button class="btn" onclick="">SEND</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="tracking py-170">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 ">
+                    <div class="shipper">
+                        <strong> Shipper Information</strong>
+                    </div>
+                    <div class="ship-info" style="font-weight: bold;">
+                        <label>DLSM</label>
+                        <label>International</label>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="shipper">
+                        <strong> Client Information</strong>
+                    </div>
+                    <div class="ship-info" style="font-weight: bold;">
+                        <label>Mohamed bayoumi</label>
+                        <label>01294096874</label>
+                        <label>Mohamedbayoumi@gmail.com</label>
+                    </div>
+                </div>
+            </div>
+            <div id="shipment-status" class="wpcargo-row " style="text-align:center; ">
+                <p id="result-status-header">Shipment Status: </p>
+            </div>
+            <div class="shippment-info pb-5">
+                <div class="shippment-Heading">
+                    <strong>Shipment Information </strong>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3" style="font-weight: bold;">
+                        <div class="data-shipp d-flex">
+                            <label>Product: </label> <span style="padding: 0 6px;"> Orange</span>
+
+
+                        </div>
+                        <div class="data-shipp d-flex">
+                            <label>Carrier: </label> <span style="padding: 0 6px;"> International</span>
+
+
+                        </div>
+                        <div class="data-shipp d-flex">
+                            <label>Type: </label> <span style="padding: 0 6px;"> Ocen Freight</span>
+
+
+                        </div>
+                        <div class="data-shipp d-flex">
+                            <label>Weight: </label> <span style="padding: 0 6px;"> 1000 kg</span>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <section class="map pb-5 pt-5 w-50">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.442730674085!2d31.336312275013075!3d30.110142415456004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815c0c8cd563f%3A0xe0e9785b0e9bef7d!2z2LDZg9ix2YrYp9iq!5e0!3m2!1sen!2seg!4v1710249090018!5m2!1sen!2seg"
+                    width="1315" height="520" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </div>
+    </section>
+    <!--  -->
+
+    <!-- Process -->
+    <!-- <section class="about py-80 pt-3 process">
+        <div class="container">
+            <div class="row">
+
+                <div class="sec-section d-flex">
+                    <div class="col-xl-5 col-lg-12">
+                        <div class="list">
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-truck-fast"></i>
+                                    </div>
+                                    <div class="text ">
+                                        <span class="text-capitalize" style="font-weight: 700;">order Placed </span>
+                                        <h3>Form: tranzkrt</h3>
+                                        <h3>To: Dlsm</h3>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="text ">
+                                        <span class="text-capitalize" style="font-weight: 700;">Completed</span>
+                                        <div class="rating pt-2">
+                                            <i class="rating__star far fa-star"></i>
+                                            <i class="rating__star far fa-star"></i>
+                                            <i class="rating__star far fa-star"></i>
+                                            <i class="rating__star far fa-star"></i>
+                                            <i class="rating__star far fa-star"></i>
+                                        </div>
+                                        <div class="feedBack">
+                                            <textarea name="Comment" class="form-control rounded-0"
+                                                placeholder="Feedback" style="height: 109px;"></textarea>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/process.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+</html>

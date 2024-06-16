@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>Request</title>
+</head>
+
+<body>
+    <button class="btn btn ToHome d-none" id="ToHome"><i class="fa-solid fa-up"></i></button>
+    <!-- Register -->
+    <section class="login register">
+        <div class="signin "></div>
+        <div class="layer pb-5 pt-4">
+            <div class=" container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12 col-sm-12">
+                        <div class="box row justify-content-center">
+                            <div class="text text-center mt-2 ">
+                                <h2>Register</h2>
+                                <div class="elementor">
+                                    <span class="elementor-divider"></span>
+                                </div>
+                            </div>
+                            <form class="form reg col-xl-12 row justify-content-start mt-md-5 mt-sm-5 ">
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <input type="text" name="Name" id="Name" placeholder="Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <input type="Email" name="Email" id="Email" placeholder="Email">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <input type="Password" name="Password" id="Password" placeholder="Password">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <input type="Password" name="Password_confirmation" id="Password_confirmation"
+                                        placeholder="Confirm Password">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Phone">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User">
+                                    <input type="text" name="Nationality" id="Nationality" placeholder="Nationality">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User">
+                                    <input type="text" name="SSN" id="SSN" placeholder="SSN">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User position-relative">
+                                    <label class="">Photo Profile </label>
+                                    <input type="file" name="Photo" id="Photo" class="photo ps-2">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all User Factory Shipping Ex-Import">
+                                    <select class="form-select" name="table_choice" aria-label="Default select example"
+                                        id="Select-Type" onclick="DUser()">
+                                        <option selected class="d-none" value="0">Select Your Type</option>
+                                        <option onclick="DUser()" value="1">User</option>
+                                        <option onclick="DUser()" value="2">Shipping</option>
+                                        <option onclick="DUser()" value="3">Import-Export</option>
+                                        <option onclick="DUser()" value="4">Factory</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 all Shipping">
+                                    <input type="text" name="BusinessHours" id="BusinessHours"
+                                        placeholder="Business Hours">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all Factory Shipping Ex-Import">
+                                    <input type="text" name="Website" id="Website" placeholder="Website">
+                                </div>
+                                <div class="col-lg-6 col-md-6 form-floating all Shipping">
+                                    <textarea class="form-control rounded-0" id="BusinessHistory" name="BusinessHistory"
+                                        placeholder="Business History"></textarea>
+                                    <p name="Business History" class="">Business History</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 all Factory Ex-Import position-relative">
+                                    <label class="">Comercial Record</label>
+                                    <input type="file" name="CommercialRecord" id="CommercialRecord" class="photo ps-2">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all Factory Ex-Import position-relative">
+                                    <label class="">Industrial Record</label>
+                                    <input type="file" name="IndustrialRecord" id="IndustrialRecord" class="photo ps-2">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all Factory Shipping Ex-Import">
+                                    <input type="text" name="Address" id="Address" placeholder="Location">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" name="CountryDealing" class="all Factory Ex-Import"
+                                        id="CountryDealing" placeholder="Country Dealing">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" name="CountryTarget" class="all Factory Ex-Import"
+                                        id="CountryTarget" placeholder="Country Target">
+                                </div>
+                                <div class="col-lg-6 col-md-6 all Ex-Import position-relative">
+                                    <label class="">Taxcard</label>
+                                    <input type="file" name="Taxcard" id="Taxcard" class="photo ps-2">
+                                </div>
+                                <div class="col-lg-12 row ">
+                                    <div class="col-lg-3 col-md-4 text-start ps-xl-3">
+                                        <button type="button" class="btn ms-lg-1" onclick="Register()">SignUp</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Response Message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            onclick="changeURL()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Register -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+</html>

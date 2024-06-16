@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR-->
+    <navbar id="Nav-Bar">
+
+    </navbar>
+    <!-- </NAVBAR> -->
+
+    <!-- COMMON -->
+    <section class="common">
+        <div class="container">
+            <div class="text air ps-5 text-uppercase">
+                <h2>All Agent </h2>
+                <ul class="d-flex p-2">
+                    <li>
+                        <a href="../../components/home/index.html"><span>Home</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- </COMMON> -->
+    <!-- All Agent -->
+    <section class="login register agents">
+        <div class="signin "></div>
+        <div class="layer pb-5 pt-4">
+            <div class=" container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-12 col-sm-12">
+                        <div class="box row justify-content-center">
+                            <div class="text text-center mt-2 ">
+                                <h2>Agent</h2>
+                                <div class="elementor">
+                                    <span class="elementor-divider"></span>
+                                </div>
+                            </div>
+                            <div class="form reg col-xl-12 row justify-content-start mt-md-5 mt-sm-5 ">
+                                <div class="col-lg-6 col-md-6">
+                                    <input type="text" name="Name" id="AgentName" placeholder="Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <input type="Email" name="Email" id="AgentEmail" placeholder="Email">
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <input type="Password" name="Password" id="AgentPassword" placeholder="Password">
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <input type="Password" name="Password_confirmation" id="AgentConfirm"
+                                        placeholder="Confirm Password">
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <input type="text" name="PhoneNumber" id="AgentPhone" placeholder="Phone">
+                                </div>
+                                <div class="buttouns d-flex">
+                                    <button class="btn btn-danger mt-4" onclick="addAgent()" id="add"> Add </button>
+                                    <button class="btn btn-info mt-4 d-none" onclick="updateAgent()" id="upd">
+                                        Update</button>
+                                    <button class="btn btn-danger mt-4" onclick="DeleteAll()">Delete All</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="agent pt-5">
+                    <div class="container">
+                        <table class="table table-hover table-bordered  table-striped ">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
+                                    <th scope="col">Edit </th>
+                                    <th scope="col">Delete </th>
+                                </tr>
+                            </thead>
+                            <tbody id="tBody">
+                                <!-- <tr>
+                                    <th scope="row">Dina Mohamed</th>
+                                    <td>dinam6329@gmail.com</td>
+                                    <td>01002323242</td>
+                                    <td>**************</td>
+                                    <td> <button class="btn btn-danger"> Edit </button> </td>
+                                    <td> <button class="btn btn-danger"> Delete </button> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dina Mohamed</th>
+                                    <td>dinam6329@gmail.com</td>
+                                    <td>01002323242</td>
+                                    <td>**************</td>
+                                    <td> <button class="btn btn-danger"> Edit </button> </td>
+                                    <td> <button class="btn btn-danger"> Delete </button> </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dina Mohamed</th>
+                                    <td>dinam6329@gmail.com</td>
+                                    <td>01002323242</td>
+                                    <td>**************</td>
+                                    <td> <button class="btn btn-danger"> Edit </button> </td>
+                                    <td> <button class="btn btn-danger"> Delete </button> </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </All Agent> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/agent.js"></script>
+    <script src="../../JS/navbar.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+
+</html>

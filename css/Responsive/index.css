@@ -1,0 +1,268 @@
+@media screen and (max-width: 1024px) {
+    .about .para {
+        display: none !important;
+    }
+    .about .txt {
+        padding-left: 0 !important;
+    }
+    .about .txt h2 {
+        font-size: 47px;
+    }
+    .about .sec-section {
+        display: block !important;
+    }
+    .about .sec-section .list {
+        padding-left: 0;
+    }
+    .about .container {
+        max-width: 100%;
+    }
+    .about .sec-section .imgsection {
+        padding-top: 158px;
+    }
+    .about .sec-section .divred {
+        left: 4px;
+        top: 1px;
+        width: 99%;
+    }
+    .about .sec-section .imgsection img {
+        width: 105%;
+    }
+    .about .sec-section .divred .numbers .right {
+        padding-left: 154px;
+    }
+    .about .sec-section .divred .numbers .right p {
+        padding-top: 19px;
+    }
+    .trans .buttn {
+        display: none !important;
+    }
+    .trans .cards.d-flex {
+        display: contents !important;
+    }
+    .trans .card-img img {
+        width: 100%;
+    }
+    .trans .container {
+        max-width: 1000px;
+    }
+    .trans .smallcard {
+        left: 18px;
+        width: 96%;
+        bottom: 32px;
+    }
+    .trans .smallimg img {
+        width: 11%;
+
+        top: -55px;
+    }
+    .trans .smallcardtext {
+        margin-top: -64px;
+        padding: 13px 32px;
+    }
+    .trans .cards .cardsingle {
+        padding: 10px 0;
+    }
+    .trans .text h2 {
+        font-size: 40px;
+    }
+    .trans .text {
+        padding-left: 0 !important;
+    }
+    .about ul {
+        padding-left: 0rem !important;
+    }
+    .about .imgsection {
+        display: none;
+    }
+    .plane .imgred {
+        width: 83%;
+        top: 92px;
+    }
+    .product .imgprod span {
+        bottom: -247%;
+        left: -88px;
+    }
+    .product .imgprod .text {
+        padding: 17px 0px;
+    }
+    .plane .thirdimg {
+        width: 65%;
+        top: -138px;
+        left: 340px;
+    }
+    .plane.py-80 {
+        padding: 0 !important;
+    }
+    .Testimonials .testimg {
+        padding: 0 !important;
+    }
+    .Testimonials .testText p {
+        padding: 0px 0px 0 35px;
+        font-size: 29px;
+    }
+    .Testimonials .Test span {
+        left: -11px;
+    }
+    .protect .imgcar img {
+        left: -127px;
+    }
+    .protect-text h2 {
+        font-size: 24px;
+        margin-bottom: 19px;
+    }
+    .protect .icons.d-flex {
+        display: block !important;
+    }
+    .protect .icons {
+        top: -87px;
+    }
+    .protect .text-icon p {
+        display: none !important;
+    }
+    .protect .link .text-icon {
+        padding: 14px 0;
+    }
+    .protect .link img {
+        width: 0;
+    }
+    .protect .protect-text {
+        padding-top: 67px !important;
+    }
+    .protect .link {
+        padding: 16px 399px;
+    }
+    .header .text {
+        position: absolute;
+        top: 28%;
+        left: 71px;
+    }
+    .header .buttn.two {
+        padding-top: 45px;
+    }
+    .header .circle {
+        position: absolute;
+        top: 102px;
+        left: 15px;
+    }
+    .header .circletwo {
+        position: absolute;
+        top: 16%;
+        left: 6%;
+    }
+    .header .text h1 {
+        font-size: 60px;
+    }
+    .header {
+        height: 720px;
+    }
+    .pricingNew .padbox {
+        margin: 0 -37px;
+    }
+    .pricingNew .boxPrice .list {
+        margin: -21px -36px;
+    }
+
+    .pricingNew .boxPrice {
+        margin: 37px 0;
+    }
+    .pricingNew .photos.d-flex {
+        display: none !important;
+    }
+    .pricingNew .spnPrice span {
+        margin: -96px;
+    }
+    .pricingNew .layer .priceText h2 {
+        font-size: 51px;
+    }
+    .pricingNew .layer .priceText {
+        padding: 119px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .plane .thirdimg {
+        left: 267px;
+        height: 101px;
+    }
+    .trans .text {
+        padding-left: 11px !important;
+    }
+    .trans .cards .cardsingle {
+        padding: 8px 0 0 18px;
+    }
+    .trans .smallcard {
+        left: 30px;
+        height: 105px;
+        width: 94%;
+        bottom: 19px;
+    }
+    .trans .smallimg img {
+        width: 14%;
+        top: -55px;
+    }
+    .trans .smallcardtext {
+        margin-top: -67px;
+    }
+    .about .sec-section .divred {
+        left: -5px;
+        top: 1px;
+        width: 102%;
+    }
+    .plane .layer .lists {
+        padding: 53px 0;
+    }
+    .plane .layer .text {
+        left: 49px;
+    }
+    .plane .layer .text h2 {
+        font-size: 42px;
+        font-weight: 600;
+        width: 90%;
+    }
+    .Testimonials .testText p {
+        padding: 27px 0px 0px 37px;
+        font-size: 24px;
+    }
+    .protect .link {
+        padding: 16px 251px;
+    }
+    .protect .imgcar {
+        left: -87px;
+    }
+    .protect .protect-text {
+        padding-top: 49px !important;
+    }
+    .imgrightwo {
+        position: relative;
+        bottom: 67%;
+        padding-left: 559px;
+    }
+    .imgrightwo img {
+        border-radius: 50%;
+        /* width: 62%; */
+        width: 101%;
+    }
+    .header .text {
+        position: absolute;
+        top: 28%;
+        left: 26px;
+    }
+    .header .text h1 {
+        font-size: 45px;
+    }
+    .header {
+        height: 599px;
+    }
+    .header .circletwo {
+        position: absolute;
+        top: 23%;
+        left: 7%;
+    }
+    .pricingNew {
+        display: none !important;
+    }
+    .product .imgprod span {
+        display: none !important;
+    }
+}

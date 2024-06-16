@@ -1,0 +1,75 @@
+@media screen and (max-width: 1445px) {
+    .ps-xl-4-5 {
+        padding-top: 2rem !important;
+    }
+    .ps-xl-0 {
+        padding-left: 0 !important;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .ps-lg-50 {
+        padding-left: 40px !important;
+        padding-right: 0 !important;
+    }
+    .ps-lg-0 {
+        padding-left: 0 !important;
+    }
+    .form-select {
+        width: 97% !important;
+    }
+    .ps-lg-4-5 {
+        padding-left: 2rem !important;
+    }
+    .ps-lg-2-7 {
+        padding-left: 0.7rem !important;
+    }
+    .register .btn {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .register .form input {
+        width: 100% !important;
+    }
+    .ps-md-3 {
+        padding-left: 0.5rem !important;
+    }
+    .form-floating {
+        padding: 0 12px !important;
+    }
+}
+@media screen and (max-width: 430px) {
+    .mt-5 {
+        margin-top: -25px !important;
+    }
+    .form-select {
+        width: 100% !important;
+    }
+    .pe-2 {
+        padding-right: 0 !important;
+    }
+    .p-sm-5 {
+        padding-top: 3rem !important;
+    }
+    .form input {
+        width: 100% !important;
+    }
+    .form-control {
+        width: 100% !important;
+    }
+    .form-floating {
+        padding-left: 8px !important;
+    }
+    .mt-sm-5 {
+        margin-top: 3rem !important;
+    }
+    .form-select {
+        margin-left: 0 !important;
+    }
+    .register .btn {
+        width: 45%;
+    }
+    .layer {
+        height: 1450px;
+    }
+}

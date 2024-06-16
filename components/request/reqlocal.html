@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <title>ReqLocal</title>
+</head>
+
+<body class="position-relative">
+    <!-- NAVBAR-->
+    <navbar id="Nav-Bar">
+
+    </navbar>
+    <!-- </NAVBAR> -->
+
+    <section class="header-center ">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-lg-4  col-md-2 col-sm-3">
+                    <div class="icon alone d-flex justify-content-start  ">
+                        <div class="dropdown">
+                            <button class="btn border-0" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="" class="search"> <i class="fa-light fa-bars"></i></a>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="../../components/home/index.html">Home</a></li>
+                                <li><a class="dropdown-item" href="../../components/air/air.html">Air</a></li>
+                                <li><a class="dropdown-item" href="../../components/ocean/ocean.html">Ocean</a></li>
+                                <li><a class="dropdown-item" href="../../components/request/reqdhl.html">DHL</a></li>
+                                <li><a class="dropdown-item" href="../../components/request/reqlocal.html">Local</a>
+                                </li>
+                                <li><a class="dropdown-item"
+                                        href="../../components/request/reqinternational.html">International</a></li>
+                                <li><a class="dropdown-item" href="../../components/road/road.html">Road</a></li>
+                                <li><a class="dropdown-item" href="../../components/blog/blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="../../components/blogDetails/blogDetails.html">Blog
+                                        Details</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-md-6 col-sm-6 text-center">
+                    <div class="imglogo ">
+
+                        <a href="home.html">
+                            <img src="../../Image/main1-logo-sml-dark.png" alt="noni">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-2 col-sm-3 text-end">
+                    <a href="" class="glass"><i class="fa-solid fa-magnifying-glass "></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- COMMON -->
+    <section class="common">
+        <div class="container">
+            <div class="text ps-5">
+                <h2>Request Local</h2>
+                <ul class="d-flex p-2">
+                    <li>
+                        <a href="../../components/home/index.html"><span>Home</span></a>
+                        <i class="fa-light fa-angles-right"></i>
+                    </li>
+                    <li>Request</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- </COMMON> -->
+    <!-- REQUEST -->
+    <section class="login local">
+        <div class="signin in"></div>
+        <div class="layer py-80">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-sm-12">
+                        <div class="box ">
+                            <div class="text text-center ">
+                                <h2>Everyone Can Ask for Details, Request a Quote
+                                </h2>
+                                <div class="elementor">
+                                    <span class="elementor-divider"></span>
+                                </div>
+                            </div>
+                            <form class="form col-xl-12 row justify-content-start mt-md-5 mt-sm-5">
+                                <input type="text" class="d-none" name="req_type" value="3" id="req_type">
+                                <div class="col-lg-6 col-md-6 ">
+                                    <label for="username">From Country</label>
+                                    <select class="form-select" name="Location" aria-label="Default select example"
+                                        id="Location" onclick="CityF()">
+                                        <option class="d-none" value="0">Select Your Country</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 ">
+                                    <label for="username">From City</label>
+                                    <select class="form-select" name="Location2" aria-label="Default select example"
+                                        id="Location2" onclick="">
+                                        <option class="d-none" value="0">Select Your City</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <label for="username">To City</label>
+                                    <select class="form-select" name="Destination2" aria-label="Default select example"
+                                        id="Destination2" onclick="">
+                                        <option class="d-none" value="0">Select Your City</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <label for="GoodsType">Type </label>
+                                    <input type="text" name="GoodsType" id="GoodsType" placeholder="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 ">
+                                    <label for="Weight">Weight </label>
+                                    <input type="text" name="Weight" id="Weight" placeholder="ex: kg">
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="check ps-3 d-flex">
+                                        <input type="checkbox" name="dangerous" value="0" id="dangerous"
+                                            onclick="flip()" class="w-auto  mt-1">
+                                        <label class="true ps-3 pb-4" for="dangerous">This cargo is considered
+                                            dangerous</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 d-none" id="Seftysheet">
+                                    <label class="" for="Safety">Sefty Sheet</label>
+                                    <input type="file" name="Safety" id="Safety" class="photo">
+                                </div>
+                                <div class="col-lg-12 col-md-12 form-floating ">
+                                    <h6 class="comment text-start">Comment </h6>
+                                    <textarea class="form-control rounded-0" name="Comment" id="Comment"
+                                        placeholder="Comment" style="height: 109px;"></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="buttn text-start">
+                                        <button class="btnAll" type="button" onclick="SendReq()">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- </ REQUEST>-->
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+        function CityF() {
+            fetch('https://countriesnow.space/api/v0.1/countries')
+                .then((response) => {
+                    return response.json();
+                })
+                .then(({ data }) => {
+                    let x = document.getElementById('Location').value;
+                    let cartona = '<option class="d-none" value="0">Select Your City</option>';
+                    for (let j = 0; j < data.length; ++j) {
+                        if (data[j].country == x) {
+                            for (let i = 0; i < data[j].cities.length; i++) {
+                                cartona += `<option value="${data[j].cities[i]}" id="${data[j].cities[i]}">${data[j].cities[i]}</option>`
+                            }
+                            document.getElementById('Location2').innerHTML = cartona;
+                            document.getElementById('Destination2').innerHTML = cartona;
+                            return;
+                        }
+                    }
+                });
+        }
+    </script>
+    <script src="../../JS/navbar.js"></script>
+    <script src="../../JS/main.js"></script>
+</body>
+
+</html>

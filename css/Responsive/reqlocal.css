@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    .local .box .form input {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 430px) {
+    .local .w-auto {
+        width: 14px !important;
+    }
+    .local .check {
+        padding-top: 0;
+    }
+    .local {
+        height: 100px;
+    }
+}

@@ -1,0 +1,33 @@
+.common {
+    background-image: url(../../Image/page-title-1.jpg);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex !important;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+.common .text {
+    margin-bottom: 100px;
+}
+.common .text h2 {
+    font-size: 55px;
+    color: #fff;
+}
+.common .text li {
+    color: #fff;
+    font-size: 17px;
+}
+.common .text span {
+    color: #fff;
+    transition: all 0.5s;
+}
+.common .text span:hover {
+    color: #e73237;
+}
+.common .text i {
+    padding: 0 5px;
+    color: #e73237;
+}

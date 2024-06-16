@@ -1,0 +1,177 @@
+/* .about.process .sec-section .list ul li::before {
+    content: "";
+    width: 0;
+    height: 219px;
+}
+.about.process .sec-section .list .icon {
+    background: #e8d9da;
+    z-index: 888;
+}
+.about.process .sec-section .list .icon i {
+    padding-left: 17px;
+    padding-top: 18px;
+    color: rgb(215, 0, 6);
+}
+.about.process .text .feedBack {
+    padding: 21px 0;
+}
+.about.process .text .rating i {
+    cursor: pointer;
+    color: #dabd18b2;
+} */
+
+.tracking .line {
+    border-bottom: 1px solid #858b89;
+    width: 90%;
+    padding: 9px 0px;
+}
+.tracking .shipper strong {
+    font-size: 21px;
+}
+.tracking .ship-info {
+    display: grid;
+    padding: 14px 9px;
+}
+.tracking .shipper {
+    border-bottom: 1px solid #858b89;
+    width: 104%;
+    padding: 14px 4px;
+}
+.tracking .ship-info label {
+    padding: 5px 0;
+}
+#shipment-status #result-status-header {
+    background-color: #ababab;
+    line-height: 1.3;
+    padding: 13px 0 12px;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    display: block;
+    width: 103%;
+}
+
+.shippment-Heading {
+    border-bottom: 1px solid #858b89;
+    width: 102%;
+    padding: 14px 4px;
+}
+.shippment-info .data-shipp {
+    padding: 14px 9px;
+    display: grid;
+}
+.shippment-info .shippment-Heading {
+    font-size: 21px;
+}
+.deliverd .box {
+    position: relative;
+}
+.deliverd .box.one {
+    top: -144px;
+    left: -49px;
+}
+.deliverd .icon i {
+    border-radius: 50%;
+    font-size: 34px;
+    color: red;
+    margin: 33px 31px;
+}
+.deliverd .box .icon {
+    cursor: pointer;
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    background: #fff;
+}
+.deliverd .box.two {
+    top: -93px;
+    right: 17px;
+}
+.deliverd .box.three {
+    bottom: 48px;
+    left: 8px;
+}
+.deliverd .box.four {
+    bottom: 133px;
+    left: 58px;
+}
+.deliverd .box.five {
+    bottom: 177px;
+    left: 331px;
+}
+.deliverd .box.six {
+    bottom: 58px;
+    left: -75px;
+}
+.deliverd h6 {
+    padding: 0px 65px;
+}
+.deliverd {
+    padding: 69px 0;
+}
+.deliverd .text {
+    line-height: 10;
+}
+.deliverd .text h2 {
+    font-size: 45px;
+    font-weight: bold;
+}
+.deliverd .text h2.spe {
+    padding-bottom: 50px;
+}
+.deliverd .imgg {
+    background-image: url(../../Image/6.jpg);
+    width: 50%;
+
+    height: 130%;
+}
+.deliverd .layer {
+    opacity: 0.81;
+    background-color: rgb(16, 29, 38);
+    height: 100%;
+}
+.deliverd .option h5 {
+    text-align: center;
+    color: #fff;
+    padding: 46px 0 0 0;
+    text-transform: capitalize;
+}
+.deliverd .feedBack {
+    width: 70%;
+    top: 52px;
+
+    position: relative;
+    left: 100px;
+}
+.deliverd .rating {
+    color: #dabd18b2;
+    padding: 15px 0 0 0;
+}
+.deliverd .rating i {
+    font-size: 20px;
+}
+.deliverd .sendFeedback {
+    position: relative;
+    top: 44px;
+    background: #dabd18b2;
+    left: 43%;
+    border-radius: 29px;
+    width: 13%;
+}
+.deliverd .sendFeedback .btn {
+    border: none !important;
+    color: #fff;
+}
+.deliverd .box .icon.active {
+    background-color: #d70006 !important;
+}
+.deliverd .box .icon.active i {
+    color: #fff;
+}

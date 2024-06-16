@@ -1,0 +1,15 @@
+.dhl .form-floating {
+    margin-top: 1rem;
+    padding-left: 20px;
+}
+.dhl label {
+    display: flex !important;
+    justify-content: left !important;
+    padding: 12px !important;
+}
+.dhl .layer {
+    height: auto;
+}
+.dhl .btnAll {
+    border-radius: 27px;
+}

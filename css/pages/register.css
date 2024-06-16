@@ -1,0 +1,100 @@
+.register {
+    position: relative;
+}
+.form-select {
+    padding: 14px 22px !important;
+    border: dashed 1px #e1d6d6 !important;
+    border-radius: 2px !important;
+    width: 97.5% !important;
+    margin-left: 5px !important;
+    margin-bottom: 2rem;
+}
+.form-select:focus {
+    border-color: red !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.col-xl-6 {
+    padding-bottom: 20px;
+}
+option {
+    border-radius: 0;
+}
+.form-control {
+    width: 99%;
+    background: #fff;
+    padding: 12px 22px;
+    border: dashed 1px #e1d6d6;
+}
+
+.form.reg label {
+    position: absolute !important;
+    padding: 14px -12px 14px 18px;
+    top: -13px;
+    background: white;
+    padding: 0 9px;
+    border-radius: 27px;
+    border-top: 1px dashed;
+}
+.form.reg p {
+    position: absolute !important;
+    top: -13px;
+    background: white;
+    padding: 0 9px;
+    border-radius: 27px;
+    border-top: dashed 1px #e1d6d6;
+}
+.form-control:focus,
+.form-control:focus + label,
+.form-control:focus + p {
+    border-color: red;
+    outline: none;
+}
+.form-floating > label {
+    color: #000;
+    padding: 1rem 1.75rem;
+}
+.register .btn:hover {
+    background-color: #0f1b24;
+}
+.register .btn {
+    background: #d70006;
+    height: 51px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0px;
+    width: 80%;
+    transition: all 0.6s;
+    border-radius: 27px;
+}
+.form input {
+    margin-bottom: 2rem;
+    padding: 14px 22px;
+}
+.form input[name="photo"] {
+    margin-bottom: 2rem;
+    padding: 11.5px 22px;
+}
+.form textarea {
+    padding: 11.5px 22px !important;
+}
+.form-floating > label {
+    padding: 1rem 2.55rem !important;
+}
+.form input[name="Comercial Record"] {
+    padding: 11.5px 22px;
+    padding-left: 150px !important;
+}
+.form input[name="Industrial Record"] {
+    padding: 11.5px 22px;
+    padding-left: 140px !important;
+}
+.form input[name="Taxcard"] {
+    padding: 11.5px 22px;
+    padding-left: 75px !important;
+}
+.form-floating {
+    margin-bottom: 2rem;
+    padding-left: 20px;
+}

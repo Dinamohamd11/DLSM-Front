@@ -1,0 +1,485 @@
+/* LOGIN */
+.signin {
+    background-image: url(../../Image/slider-bg-map-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.2; */
+    opacity: 0.1;
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.login {
+    position: relative;
+}
+
+.login .layer {
+    background-color: rgb(255 243 243 / 65%);
+    width: 100%;
+    z-index: 15555;
+    /* height: 100vh; */
+}
+
+.login .layer .box {
+    margin: auto;
+    text-align: center;
+    position: static;
+    z-index: 111;
+    margin-top: 26px;
+}
+
+.login .img-login {
+    position: relative;
+    right: 232px;
+    bottom: -171px;
+}
+
+.login .img-login img {
+    width: 120%;
+}
+
+.form input {
+    width: 97%;
+    background: #fff;
+
+    padding: 12px 22px;
+    border: dashed 1px #e1d6d6;
+}
+
+.form input:focus {
+    border-color: red;
+    outline: none;
+}
+
+.login .text h2 {
+    color: #0f1b24;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 0 0 12px 0;
+
+    text-transform: capitalize;
+}
+
+.login .box .checks a {
+    color: #d70006;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login .box .checks label {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #140c40;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.login .box .checks .btn {
+    background: #d70006;
+    height: 51px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 0px;
+    width: 73%;
+    border-radius: 27px;
+    transition: all 0.6s;
+}
+
+.login .checks p {
+    text-align: start;
+    padding: 0 69px;
+}
+
+.login .box .checks .btn:hover {
+    background-color: #0f1b24;
+}
+
+.login .box .checks .space {
+    padding-bottom: 35px;
+}
+
+input[type="checkbox" i]:checked {
+    accent-color: black;
+    border-radius: 5px;
+}
+
+/* NAVBAR */
+
+.logo {
+    padding: 17px 46px;
+}
+
+.logo img {
+    width: 70%;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav {
+    width: 100%;
+    background-color: rgb(32, 43, 51);
+    height: 82px;
+    position: fixed;
+    z-index: 99999;
+}
+
+.nav .list .nav-item a {
+    padding: 28px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.4s;
+    font-family: "Nunito-700";
+}
+
+.nav .list .nav-item i {
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.dropend {
+    height: 18px;
+}
+
+.nav .list .nav-item :hover {
+    color: #e73237;
+}
+
+.nav .list .nav-item a:hover,
+.nav .list .nav-item a:hover i {
+    color: #e73237;
+}
+
+.nav .list .nav-item .dropdown-item {
+    color: black;
+    padding: 12px 10px;
+}
+
+.nav .list .nav-item .dropdown-item:hover {
+    color: #e73237;
+}
+
+/* ****** */
+
+.ToHome {
+    background-color: #d70006;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 555555555;
+}
+
+.ToHome i {
+    color: #e1d6d6;
+}
+
+/* ****** */
+
+.header-center i {
+    font-size: 25px;
+    color: black;
+    padding: 19px 11px;
+}
+
+.header-center {
+    background-color: #fff;
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 77777777;
+}
+
+.header-center .imglogo {
+    padding: 13px 0;
+}
+
+.header-center .imglogo img {
+    width: 79%;
+}
+
+/* foooter */
+.imgfoter {
+    background-image: url(../../Image/foooter-final-bg-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.footer .shape {
+    width: 80%;
+    height: 119px;
+    transform: skew(-20deg);
+    background: #d70006;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer .shape * {
+    transform: skew(20deg);
+}
+
+.footer .part i {
+    text-align: center;
+    margin-top: 50px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: transparent;
+    border-radius: 50%;
+    font-size: 22px;
+    border: dashed 1px;
+    color: #f22c31;
+}
+
+.footer .part h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+.footer .icon {
+    padding: 0 54px;
+    margin-bottom: 20px;
+}
+
+.footer .shape a {
+    font-size: 34px;
+    line-height: 1.5;
+    margin-top: 21px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    display: inline-block;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.footer .shape p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.footer {
+    border-bottom: 1px solid #494b4c;
+}
+
+.imgfooter {
+    background-image: url(../../Image/footer-bg-main-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(15, 27, 36);
+}
+
+.footer-bottom .imglogo img {
+    width: 66%;
+}
+
+.footer-bottom .first p {
+    position: relative;
+    color: #b3b3b3;
+    font-size: 17px;
+    line-height: 32px;
+}
+
+.footer-bottom .first i {
+    color: red;
+    padding: 8px 11px;
+}
+
+.footer-bottom .first p:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: 0;
+    bottom: -9px;
+    width: 111%;
+
+    padding: 29px;
+    border-bottom: dashed 1px #374148;
+}
+
+.footer-bottom a {
+    color: #b3b3b3;
+    transition: all 0.6s;
+}
+
+.footer-bottom a:hover {
+    color: #ef2429;
+}
+
+.footer-bottom .rectangle {
+    width: 100%;
+    background-color: rgb(27, 38, 46);
+    height: 93px;
+    position: absolute;
+    border-radius: 4px;
+}
+
+.footer-bottom .rectangle h2 {
+    font-size: 16px;
+    padding: 15px 12px;
+
+    color: #fff;
+}
+
+.footer-bottom .rectangle a {
+    padding: 17px 13px;
+}
+
+.footer-bottom .over {
+    border: dashed 1px;
+    width: 105%;
+    height: 108px;
+
+    color: rgb(27, 38, 46);
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.footer-bottom .rectangle {
+    width: 100%;
+    background-color: rgb(27, 38, 46);
+    height: 93px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.footer-bottom .msg {
+    position: absolute;
+    width: 24%;
+    position: relative;
+    top: -71px;
+    margin-left: 254px;
+    background-color: #ef2429;
+    border-radius: 5px;
+    height: 54px;
+    transform: skew(-20deg);
+}
+
+.footer-bottom .msg i {
+    padding: 16px 24px;
+    color: #fff;
+    transform: skew(20deg);
+    font-size: 20px;
+}
+
+.footer-bottom .commn li {
+    list-style: none;
+    padding: 10px 0px;
+}
+
+.footer-bottom .commn .text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 23px;
+}
+
+.footer-bottom .commn .text {
+    position: relative;
+}
+
+.footer-bottom .commn .text::after {
+    content: "";
+    height: 4px;
+    width: 50px;
+    border-radius: 0;
+    position: absolute;
+    left: 33px;
+    bottom: 0;
+    transform: skew(-45deg);
+    background-color: red;
+}
+
+.footer-bottom .input-group input#zozo-mc-email {
+    color: #fff;
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+.footer-bottom .input-group input#zozo-mc-email:focus {
+    outline: none !important;
+}
+
+.footer-bottom .input-group button {
+    background-color: #d70006;
+    width: 35px;
+    border: none;
+    height: 50px;
+    border-radius: 7px;
+    transition: all 0.5s;
+}
+
+.footer-bottom .input-group button:active {
+    background-color: #9e0005;
+}
+
+.footer-bottom .input-group i {
+    position: absolute;
+    left: 8px;
+    top: 15px;
+    color: #fff;
+}
+
+.footer-bottom .last-sec-padding {
+    padding-left: 30px;
+    padding-top: 12px;
+}
+
+.footer-bottom .commn p {
+    color: #b3b3b3;
+    padding: 10px 0;
+}
+
+.footer-bottom .commn h2 {
+    font-size: 19px;
+    color: #fff;
+}
+
+.footer-bottom .icons i {
+    background-color: #54595f;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.footer-bottom .icons i:hover {
+    background-color: #d70006;
+}
+
+.endall p {
+    text-align: center;
+    color: #fff;
+    margin: 20px;
+}
+
+.endall {
+    padding: 7px;
+    background-color: rgb(15, 27, 36);
+    border-top: 1px solid #494b4c;
+}
+
+.endall a {
+    color: #d70006;
+}
+
+/* </FOOTER> */

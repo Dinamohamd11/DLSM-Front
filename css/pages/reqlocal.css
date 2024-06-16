@@ -1,0 +1,18 @@
+.local label {
+    display: flex !important;
+    justify-content: left !important;
+    padding: 8px !important;
+}
+.local label.true {
+    padding-left: 12px !important;
+    padding-bottom: 38px !important;
+}
+.local .check {
+    padding-top: 37px;
+}
+.local .layer {
+    height: auto;
+}
+.local .btnAll {
+    border-radius: 27px;
+}

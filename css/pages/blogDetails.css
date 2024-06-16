@@ -1,0 +1,109 @@
+.blog .blogchild.details {
+    position: absolute;
+    right: 30px;
+    bottom: -36px;
+    transform: skewX(-22deg);
+    background-color: #d70006;
+    padding: 0;
+    width: 15%;
+    border-style: dashed;
+    border-width: 0px 0px 0px 5px;
+    border-color: #f4efef;
+}
+.blog .blogthems.details {
+    transform: skewX(22deg);
+    color: white;
+    padding: 9px 24px;
+    font-family: "Nunito-500";
+}
+.blog .para p {
+    color: #736a6a;
+    font-size: 18px;
+}
+.blog .paratwo {
+    background-color: rgb(254, 248, 248);
+    padding: 50px;
+    position: relative;
+}
+.blog .paratwo p {
+    padding: 30px 5px 0 5px;
+    font-style: italic;
+    font-size: 22px;
+    font-family: "Nunito-700";
+}
+.blog .paratwo span {
+    position: absolute;
+    top: 2px;
+    left: 390px;
+    width: 65px;
+    background: #d70006;
+    transform: skewX(343deg);
+    padding: 11px 20px 4px 20px;
+}
+.blog .paratwo span h5 {
+    color: #fff;
+    transform: skewX(10deg);
+    font-style: italic;
+    font-size: 23px;
+}
+.blog .industry .text li {
+    display: flex;
+}
+.blog .industry .text li i {
+    padding: 12px 0px;
+    font-size: 19px;
+}
+.blog .industry .text ol,
+ul {
+    padding-left: 0rem;
+}
+.blog .industry .text li h3 {
+    padding: 0 11px;
+}
+.blog .industry .text li p {
+    padding: 4px 12px;
+    font-size: 17px;
+}
+.blog .industry .text .heading i {
+    font-size: 32px;
+    padding: 6px 0px;
+}
+.blog .industry::before {
+    content: "";
+    position: relative;
+    top: 22px;
+    left: 0px;
+    padding: 0 0px 225px 0;
+    border: double 2px #d70006;
+}
+.blog .industry .text i {
+    color: #d70006;
+    transition: all 0.4s;
+}
+.blog .industry .text i:hover {
+    color: rgb(15, 26, 35);
+}
+.blog .industry img {
+    width: 100%;
+}
+.blog .industry .img:hover .lyr {
+    display: block !important;
+}
+.blog .industry .img {
+    position: relative;
+}
+.blog .industry .img .lyr {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.4;
+    left: 1px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: none;
+    transition: all 0.5s;
+}
+.blog .industry p {
+    color: grey;
+}

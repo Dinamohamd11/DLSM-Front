@@ -1,0 +1,52 @@
+.req .form .req {
+    position: relative;
+}
+.req .password input {
+    position: absolute;
+}
+.req .password i {
+    position: relative;
+}
+.req label {
+    display: flex;
+    padding: 0px 9px 5px;
+}
+.req .buttonreq {
+    width: 97%;
+    background-color: white;
+    padding: 12px;
+    margin-left: 5px;
+
+    border: dashed 1px #e1d6d6;
+}
+.req .buttonreq button:focus {
+    border-color: red;
+}
+.req .buttonreq button {
+    background-color: transparent;
+    border: none;
+    padding-right: 158px;
+    color: #797979;
+}
+.req .buttonreq i {
+    right: 16px;
+    position: relative;
+    color: #000;
+}
+.req .check input[type="checkbox" i] {
+    position: relative !important;
+    bottom: -7px;
+    width: 4% !important;
+}
+.req .check {
+    margin-left: 8px;
+}
+.req h6 {
+    padding-right: 30px !important;
+}
+.req .layer {
+    height: auto;
+}
+.req .btnAll {
+    border-radius: 27px;
+}

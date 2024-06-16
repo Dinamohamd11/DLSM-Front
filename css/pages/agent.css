@@ -1,0 +1,13 @@
+.login.agents button {
+    width: 15%;
+    margin: 12px;
+}
+.login.agents .agent button {
+    width: 66%;
+}
+.login.agents table {
+    box-shadow: 0px 7px 32px 7px #e3dada;
+    border-radius: 0;
+    border: 1px solid #f2f5fa;
+    background-color: white;
+}

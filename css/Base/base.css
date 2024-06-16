@@ -1,0 +1,35 @@
+@import url(fonts.css);
+a {
+    text-decoration: none !important  ;
+}
+.pe-10 {
+    padding-left: 3.5rem;
+}
+*::selection {
+    background-color: #d70006;
+}
+li {
+    list-style: none !important;
+}
+.ps-20 {
+    padding-left: 150px !important;
+}
+.p4 {
+    padding-left: 11px !important;
+}
+.ps-30 {
+    padding-left: 117px !important;
+}
+.pe-10 {
+    padding-right: 21px !important;
+    padding-left: 4px !important;
+}
+.py-80 {
+    padding: 80px 0 !important;
+}
+.py-170 {
+    padding: 170px 0 !important;
+}
+.py-200 {
+    padding: 200px 0 !important;
+}

@@ -1,0 +1,276 @@
+@media screen and (max-width: 1440px) {
+    .header-center {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    /* NAVBAR */
+    .header-center {
+        display: block;
+        height: 55px;
+        padding: 10px 0;
+    }
+    .header-center .imglogo img {
+        width: 55%;
+    }
+    .header-center .imglogo {
+        padding: 0 0;
+    }
+    .header-center i {
+        padding: 0;
+        font-weight: 300;
+    }
+    .nav {
+        display: none;
+    }
+    /* LOGIN */
+    .glass i {
+        padding: 4px 0;
+    }
+    .login .checks p {
+        padding: 0 68px;
+    }
+    .login .box .checks .btn {
+        width: 78%;
+    }
+    /* FOOTER */
+    .footer .icon {
+        padding: 0 108px;
+    }
+    .footer .container {
+        max-width: 100%;
+    }
+    .footer .shape {
+        width: 100%;
+        transform: none;
+        height: 135px;
+        margin-top: 29px;
+    }
+    .footer .shape * {
+        transform: none;
+    }
+    .pe-10 {
+        padding-left: 0rem;
+    }
+    .footer-bottom .container {
+        max-width: 100%;
+    }
+    .footer-bottom .commn .pt-3 {
+        padding: 0px;
+    }
+    .footer-bottom .text h2 {
+        padding-left: 0px !important;
+    }
+    .footer-bottom .commn .text::after {
+        left: 0;
+    }
+    .footer-bottom .commn .text.r::after {
+        left: 26px;
+    }
+    .footer-bottom .msg {
+        width: 13%;
+        margin-left: 91%;
+        height: 51px;
+    }
+    .footer-bottom .msg i {
+        padding: 14px 21px;
+        font-size: 21px;
+    }
+    .footer-bottom .last-sec-padding {
+        padding-left: 0 !important;
+    }
+    .footer-bottom .commn .text.r::after {
+        left: 9px;
+    }
+    /* .footer-bottom .p-sm-4 {
+        padding: 0 12px !important;
+    } */
+}
+@media screen and (max-width: 768px) {
+    /* NAVBAR */
+    .header-center .imglogo img {
+        width: 55%;
+    }
+    .header-center .imglogo {
+        padding: 0 0;
+    }
+    .header-center i {
+        padding: 0;
+        font-weight: 300;
+    }
+    /* LOGIN */
+    .glass i {
+        padding: 6px 0;
+    }
+    .login .box .form input {
+        width: 75%;
+    }
+    .login .box .checks .btn {
+        width: 55%;
+    }
+    .login .checks p {
+        padding: 0 0 0 136px;
+    }
+    /* FOOTER */
+    .footer .part h2 {
+        font-size: 21px;
+    }
+    .footer .icon {
+        padding: 0 81px;
+    }
+    .footer .shape {
+        width: 103%;
+    }
+    .footer-bottom .msg {
+        width: 15%;
+        margin-left: 91%;
+    }
+    .footer-bottom .msg i {
+        padding: 15px 16px;
+    }
+    .col-xl-3.col-lg-6.col-md-5.mb-lg-5 {
+        padding-top: 1.5rem !important;
+    }
+    .p-sm-5 {
+        padding-left: 0 !important;
+    }
+}
+@media screen and (max-width: 430px) {
+    .col-sm-auto {
+        flex: 0 0 auto;
+        width: auto;
+    }
+    .col-sm-1 {
+        flex: 0 0 auto;
+        width: 8.33333333%;
+    }
+    .col-sm-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
+    .col-sm-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-sm-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+    .col-sm-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+    .col-sm-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .col-sm-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+    .col-sm-9 {
+        flex: 0 0 auto;
+        width: 75%;
+    }
+    .col-sm-10 {
+        flex: 0 0 auto;
+        width: 83.33333333%;
+    }
+    .col-sm-11 {
+        flex: 0 0 auto;
+        width: 91.66666667%;
+    }
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    /* NAVBAR */
+    .header-center .imglogo img {
+        width: 90%;
+    }
+    .header-center .imglogo {
+        padding: 0 0;
+    }
+    .header-center i {
+        padding: 0;
+        font-weight: 300;
+        font-size: 21px;
+    }
+    .glass i {
+        padding: 5px 0;
+    }
+    .login .box .checks .btn {
+        width: 73%;
+    }
+    .text-end {
+        text-align: center !important;
+    }
+    .login .box .form input {
+        width: 96%;
+    }
+    .right {
+        position: relative;
+        top: -87px;
+    }
+    .login .checks p {
+        padding: 0 99px;
+    }
+    .pt-4 {
+        padding-top: 0 !important;
+    }
+    /* FOOTER */
+    .footer .icon {
+        padding: 0 161px;
+    }
+    .footer .shape {
+        width: 107%;
+    }
+    .footer-bottom .imglogo img {
+        width: 58%;
+    }
+    .footer-bottom .list.pt-4 {
+        padding-top: 25px !important;
+    }
+    .footer-bottom .msg {
+        left: -34px;
+        transform: none;
+    }
+    .footer-bottom .msg i {
+        transform: skew(0);
+    }
+    .p-sm-4 {
+        padding: 1.2rem !important;
+    }
+
+    .ps-4 {
+        padding-left: 0.5rem !important;
+    }
+    .footer-bottom .last-sec-padding {
+        padding-left: 13px;
+    }
+    .footer-bottom .commn .text.r::after {
+        left: 12px;
+    }
+    .pt-4 {
+        padding-top: 23px !important;
+    }
+    .footer-bottom .icons {
+        padding-bottom: 29px;
+    }
+
+    .endall p {
+        margin: 0;
+        padding: 20px;
+    }
+    .input-group .btn {
+        position: absolute !important;
+        left: 96%;
+    }
+    .ps-sm-6 {
+        padding-left: 11px !important;
+    }
+}

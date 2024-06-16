@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+    .req .box .form input {
+        width: 100%;
+    }
+    .req .buttonreq button {
+        padding-right: 0;
+    }
+}

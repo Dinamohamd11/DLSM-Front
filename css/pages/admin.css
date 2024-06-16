@@ -1,0 +1,57 @@
+.admin .adminlist {
+    background: rgb(32, 43, 51);
+    height: 1000px;
+}
+.admin .adminlist .adminimg i {
+    font-size: 48px;
+    color: rgb(32, 43, 51);
+    border-radius: 50%;
+    background: white;
+    padding: 22px 27px;
+}
+.scrollme {
+    overflow-x: auto;
+}
+.admin .adminlist .adminimg {
+    text-align: center;
+    padding: 23px 0 0 0;
+}
+.admin .adminlist .txt {
+    text-align: center;
+    padding: 9px 3px 0 4px;
+}
+.admin .adminlist .txt a {
+    color: white;
+}
+.admin .list ul {
+    padding-left: 0rem !important;
+}
+.admin .list li {
+    display: flex;
+    color: #fff;
+    padding: 12px;
+    filter: drop-shadow(2px 4px 6px black);
+    transition: all 0.5s;
+}
+.admin .list i {
+    padding: 5px 23px;
+}
+.admin .list h5 {
+    transition: all 0.5s;
+}
+.admin .list li:hover {
+    color: #d70006;
+    cursor: pointer;
+}
+.admin table th {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.admin table > * {
+    text-align: center;
+}
+.admin .buttonAdmin button {
+    color: #ffffff;
+    background-color: #d70006;
+    padding: 3px 20px 6px 17px;
+}
