@@ -1,42 +1,43 @@
 (function Main() {
-    document.getElementById("HeaderRequest").innerHTML;
-    let { id, TypeOfRequest } = JSON.parse(localStorage.getItem("CurrentReq"));
-    console.log(id);
-    console.log(TypeOfRequest);
-    if (TypeOfRequest == 3) {
-        // Local Request
-        fetch(`${localStorage.getItem('API')}/requests/${id}`)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                console.log(data);
-                let Safe = `<div class="info "><span>Safety:</span><h6>${data.request.Safety}</h6></div>`;
-                document.getElementById("NameRequest").innerText = "Local Request";
-                document.getElementById("HeaderRequest").innerHTML = `    
+  document.getElementById("HeaderRequest").innerHTML;
+  let { id, TypeOfRequest } = JSON.parse(localStorage.getItem("CurrentReq"));
+  console.log(id);
+  console.log(TypeOfRequest);
+  if (TypeOfRequest == 3) {
+    // Local Request
+    fetch(`${localStorage.getItem("API")}/requests/${id}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        if (data.request) data = data.request;
+        else data = data;
+        let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+        document.getElementById("NameRequest").innerText = "Local Request";
+        document.getElementById("HeaderRequest").innerHTML = `    
         <div class="col-lg-6 ps-5">
           <div class="info ">
            <span>Country:</span>
-           <h6>${data.request.Country}</h6>
+           <h6>${data.Country}</h6>
        </div>
        <div class="info ">
            <span>Location:</span>
-           <h6> ${data.request.Location}</h6>
+           <h6> ${data.Location}</h6>
        </div>
        <div class="info ">
             <span>Destination:</span>
-            <h6> ${data.request.Destination}</h6>
+            <h6> ${data.Destination}</h6>
         </div>
        
         <div class="info ">
         <span>Weight:</span>
-        <h6>${data.request.Weight}</h6>
+        <h6>${data.Weight}</h6>
         </div>
-        ${data.request.Safety != null ? Safe : ""}
+        ${data.Safety != null ? Safe : ""}
         
         <div class="info ">
             <span>Notes:</span>
-            <h6>${data.request.Comment}</h6>
+            <h6>${data.Comment}</h6>
         </div>
        
    </div>
@@ -47,7 +48,7 @@
        </div>
        <div class="info">
            <span>Good Types:</span>
-           <h6>${data.request.GoodsType}</h6>
+           <h6>${data.GoodsType}</h6>
        </div>
        <div class="info ">
            <span>Prefer Type:</span>
@@ -56,54 +57,243 @@
    
                 </div>
                 `;
-                displayOffer();
-            });
-    } else if (TypeOfRequest == 2) {
-        // International
-        fetch(`${localStorage.getItem('API')}/requests/${id}`)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                console.log(data);
-                if (data.request.TypeOfInternational == 1) {
-                    // WILD
-                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.request.Safety}</h6></div>`;
-                    document.getElementById("NameRequest").innerText =
-                        "International (Wild) Request";
-                    document.getElementById("HeaderRequest").innerHTML = `    
+        displayOffer();
+      });
+  } else if (TypeOfRequest == 2) {
+    // International
+    fetch(`${localStorage.getItem("API")}/requests/${id}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((alldata) => {
+        console.log(alldata);
+        let data = alldata;
+        if (data.TypeOfInternational == 1) {
+          // WILD
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Wild) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
+              <div class="col-lg-6 ps-5">
+          
+             <div class="info ">
+                 <span>Location:</span>
+                 <h6> ${data.Location}</h6>
+             </div>
+             <div class="info ">
+                  <span>Destination:</span>
+                  <h6> ${data.Destination}</h6>
+              </div>
+              <div class="info ">
+              <span>Weight:</span>
+              <h6>${data.Weight}</h6>
+              </div>
+              <div class="info ">
+              <span>Length:</span>
+              <h6>${data.Length}</h6>
+              </div>
+              <div class="info ">
+              <span>Height:</span>
+              <h6>${data.Height}</h6>
+              </div>
+              <div class="info ">
+              <span>Width:</span>
+              <h6>${data.Width}</h6>
+              </div>  
+              ${data.Safety != null ? Safe : ""}
+              
+              
+              <div class="info ">
+                  <span>Notes:</span>
+                  <h6>${data.Comment}</h6>
+              </div>
+             
+         </div>
+         
+         <div class="col-lg-6">
+             <div class="imgofer">
+                 <img src="../../Image/about-img-2-1.jpg">
+             </div>
+             <div class="info">
+                 <span>Good Types:</span>
+                 <h6>${data.GoodsType}</h6>
+             </div>
+             
+             <div class="info ">
+             <span>TypesOfTruck:</span>
+             <h6>${data.TypesOfTruck}</h6>
+         </div>
+         
+         <div class="info ">
+         <span>WeightOfSingleCarton:</span>
+         <h6>${data.WeightOfSingleCarton}</h6>
+     </div>
+         
+                      </div>
+                      `;
+        } else if (data.TypeOfInternational == 2) {
+          // SEA
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Sea) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
+              <div class="col-lg-6 ps-5">
+          
+             <div class="info ">
+                 <span>Location:</span>
+                 <h6> ${data.Location}</h6>
+             </div>
+             <div class="info ">
+                  <span>Destination:</span>
+                  <h6> ${data.Destination}</h6>
+              </div>
+              <div class="info ">
+              <span>Weight:</span>
+              <h6>${data.Weight}</h6>
+              </div>
+              <div class="info ">
+              <span>Length:</span>
+              <h6>${data.Length}</h6>
+              </div>
+              <div class="info ">
+              <span>Height:</span>
+              <h6>${data.Height}</h6>
+              </div>
+              <div class="info ">
+              <span>Width:</span>
+              <h6>${data.Width}</h6>
+              </div>  
+              ${data.Safety != null ? Safe : ""}
+              
+              
+              <div class="info ">
+                  <span>Notes:</span>
+                  <h6>${data.Comment}</h6>
+              </div>
+             
+         </div>
+         
+         <div class="col-lg-6">
+             <div class="imgofer">
+                 <img src="../../Image/about-img-2-1.jpg">
+             </div>
+             <div class="info">
+                 <span>Good Types:</span>
+                 <h6>${data.GoodsType}</h6>
+             </div>
+             
+             <div class="info ">
+             <span>ContainerTypeAndSize:</span>
+             <h6>${data.ContainerTypeAndSize}</h6>
+         </div>
+         
+         <div class="info ">
+         <span>NumberOfContainer:</span>
+         <h6>${data.NumberOfContainer}</h6>
+     </div>
+         
+                      </div>
+                      `;
+        } else if (data.TypeOfInternational == 3) {
+          // AIR
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Air) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
+              <div class="col-lg-6 ps-5">
+          
+             <div class="info ">
+                 <span>Location:</span>
+                 <h6> ${data.Location}</h6>
+             </div>
+             <div class="info ">
+                  <span>Destination:</span>
+                  <h6> ${data.Destination}</h6>
+              </div>
+              <div class="info ">
+              <span>Weight:</span>
+              <h6>${data.Weight}</h6>
+              </div>
+              <div class="info ">
+              <span>Length:</span>
+              <h6>${data.Length}</h6>
+              </div>
+              <div class="info ">
+              <span>Height:</span>
+              <h6>${data.Height}</h6>
+              </div>
+              <div class="info ">
+              <span>Width:</span>
+              <h6>${data.Width}</h6>
+              </div>  
+              ${data.Safety != null ? Safe : ""}
+              
+              
+              <div class="info ">
+                  <span>Notes:</span>
+                  <h6>${data.Comment}</h6>
+              </div>
+             
+         </div>
+         
+         <div class="col-lg-6">
+             <div class="imgofer">
+                 <img src="../../Image/about-img-2-1.jpg">
+             </div>
+             <div class="info">
+                 <span>Good Types:</span>
+                 <h6>${data.GoodsType}</h6>
+             </div>
+             
+             <div class="info ">
+             <span>NumberOfCartons:</span>
+             <h6>${data.NumberOfCartons}</h6>
+         </div>
+         
+         <div class="info ">
+         <span>WeightOfSingleCarton:</span>
+         <h6>${data.WeightOfSingleCarton}</h6>
+     </div>
+         
+                      </div>
+                      `;
+        }
+        data = alldata.request;
+        console.log(data);
+        if (data.TypeOfInternational == 1) {
+          // WILD
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Wild) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
             <div class="col-lg-6 ps-5">
         
            <div class="info ">
                <span>Location:</span>
-               <h6> ${data.request.Location}</h6>
+               <h6> ${data.Location}</h6>
            </div>
            <div class="info ">
                 <span>Destination:</span>
-                <h6> ${data.request.Destination}</h6>
+                <h6> ${data.Destination}</h6>
             </div>
             <div class="info ">
             <span>Weight:</span>
-            <h6>${data.request.Weight}</h6>
+            <h6>${data.Weight}</h6>
             </div>
             <div class="info ">
             <span>Length:</span>
-            <h6>${data.request.Length}</h6>
+            <h6>${data.Length}</h6>
             </div>
             <div class="info ">
             <span>Height:</span>
-            <h6>${data.request.Height}</h6>
+            <h6>${data.Height}</h6>
             </div>
             <div class="info ">
             <span>Width:</span>
-            <h6>${data.request.Width}</h6>
+            <h6>${data.Width}</h6>
             </div>  
-            ${data.request.Safety != null ? Safe : ""}
+            ${data.Safety != null ? Safe : ""}
             
             
             <div class="info ">
                 <span>Notes:</span>
-                <h6>${data.request.Comment}</h6>
+                <h6>${data.Comment}</h6>
             </div>
            
        </div>
@@ -114,59 +304,58 @@
            </div>
            <div class="info">
                <span>Good Types:</span>
-               <h6>${data.request.GoodsType}</h6>
+               <h6>${data.GoodsType}</h6>
            </div>
            
            <div class="info ">
            <span>TypesOfTruck:</span>
-           <h6>${data.request.TypesOfTruck}</h6>
+           <h6>${data.TypesOfTruck}</h6>
        </div>
        
        <div class="info ">
        <span>WeightOfSingleCarton:</span>
-       <h6>${data.request.WeightOfSingleCarton}</h6>
+       <h6>${data.WeightOfSingleCarton}</h6>
    </div>
        
                     </div>
                     `;
-                } else if (data.request.TypeOfInternational == 2) {
-                    // SEA
-                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.request.Safety}</h6></div>`;
-                    document.getElementById("NameRequest").innerText =
-                        "International (Sea) Request";
-                    document.getElementById("HeaderRequest").innerHTML = `    
+        } else if (data.TypeOfInternational == 2) {
+          // SEA
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Sea) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
             <div class="col-lg-6 ps-5">
         
            <div class="info ">
                <span>Location:</span>
-               <h6> ${data.request.Location}</h6>
+               <h6> ${data.Location}</h6>
            </div>
            <div class="info ">
                 <span>Destination:</span>
-                <h6> ${data.request.Destination}</h6>
+                <h6> ${data.Destination}</h6>
             </div>
             <div class="info ">
             <span>Weight:</span>
-            <h6>${data.request.Weight}</h6>
+            <h6>${data.Weight}</h6>
             </div>
             <div class="info ">
             <span>Length:</span>
-            <h6>${data.request.Length}</h6>
+            <h6>${data.Length}</h6>
             </div>
             <div class="info ">
             <span>Height:</span>
-            <h6>${data.request.Height}</h6>
+            <h6>${data.Height}</h6>
             </div>
             <div class="info ">
             <span>Width:</span>
-            <h6>${data.request.Width}</h6>
+            <h6>${data.Width}</h6>
             </div>  
-            ${data.request.Safety != null ? Safe : ""}
+            ${data.Safety != null ? Safe : ""}
             
             
             <div class="info ">
                 <span>Notes:</span>
-                <h6>${data.request.Comment}</h6>
+                <h6>${data.Comment}</h6>
             </div>
            
        </div>
@@ -177,59 +366,58 @@
            </div>
            <div class="info">
                <span>Good Types:</span>
-               <h6>${data.request.GoodsType}</h6>
+               <h6>${data.GoodsType}</h6>
            </div>
            
            <div class="info ">
            <span>ContainerTypeAndSize:</span>
-           <h6>${data.request.ContainerTypeAndSize}</h6>
+           <h6>${data.ContainerTypeAndSize}</h6>
        </div>
        
        <div class="info ">
        <span>NumberOfContainer:</span>
-       <h6>${data.request.NumberOfContainer}</h6>
+       <h6>${data.NumberOfContainer}</h6>
    </div>
        
                     </div>
                     `;
-                } else if (data.request.TypeOfInternational == 3) {
-                    // AIR
-                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.request.Safety}</h6></div>`;
-                    document.getElementById("NameRequest").innerText =
-                        "International (Air) Request";
-                    document.getElementById("HeaderRequest").innerHTML = `    
+        } else if (data.TypeOfInternational == 3) {
+          // AIR
+          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+          document.getElementById("NameRequest").innerText = "International (Air) Request";
+          document.getElementById("HeaderRequest").innerHTML = `    
             <div class="col-lg-6 ps-5">
         
            <div class="info ">
                <span>Location:</span>
-               <h6> ${data.request.Location}</h6>
+               <h6> ${data.Location}</h6>
            </div>
            <div class="info ">
                 <span>Destination:</span>
-                <h6> ${data.request.Destination}</h6>
+                <h6> ${data.Destination}</h6>
             </div>
             <div class="info ">
             <span>Weight:</span>
-            <h6>${data.request.Weight}</h6>
+            <h6>${data.Weight}</h6>
             </div>
             <div class="info ">
             <span>Length:</span>
-            <h6>${data.request.Length}</h6>
+            <h6>${data.Length}</h6>
             </div>
             <div class="info ">
             <span>Height:</span>
-            <h6>${data.request.Height}</h6>
+            <h6>${data.Height}</h6>
             </div>
             <div class="info ">
             <span>Width:</span>
-            <h6>${data.request.Width}</h6>
+            <h6>${data.Width}</h6>
             </div>  
-            ${data.request.Safety != null ? Safe : ""}
+            ${data.Safety != null ? Safe : ""}
             
             
             <div class="info ">
                 <span>Notes:</span>
-                <h6>${data.request.Comment}</h6>
+                <h6>${data.Comment}</h6>
             </div>
            
        </div>
@@ -240,53 +428,53 @@
            </div>
            <div class="info">
                <span>Good Types:</span>
-               <h6>${data.request.GoodsType}</h6>
+               <h6>${data.GoodsType}</h6>
            </div>
            
            <div class="info ">
            <span>NumberOfCartons:</span>
-           <h6>${data.request.NumberOfCartons}</h6>
+           <h6>${data.NumberOfCartons}</h6>
        </div>
        
        <div class="info ">
        <span>WeightOfSingleCarton:</span>
-       <h6>${data.request.WeightOfSingleCarton}</h6>
+       <h6>${data.WeightOfSingleCarton}</h6>
    </div>
        
                     </div>
                     `;
-                }
-                displayOffer();
-            });
-    } else if (TypeOfRequest == 1) {
-        // Local Request
-        fetch(`${localStorage.getItem('API')}/requests/${id}`)
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                console.log(data);
-                let Safe = `<div class="info "><span>Safety:</span><h6>${data.request.Safety}</h6></div>`;
-                document.getElementById("NameRequest").innerText = "DHL Request";
-                document.getElementById("HeaderRequest").innerHTML = `    
+        }
+        displayOffer();
+      });
+  } else if (TypeOfRequest == 1) {
+    // Local Request
+    fetch(`${localStorage.getItem("API")}/requests/${id}`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+        document.getElementById("NameRequest").innerText = "DHL Request";
+        document.getElementById("HeaderRequest").innerHTML = `    
         <div class="col-lg-6 ps-5">
 
        <div class="info ">
            <span>Location:</span>
-           <h6> ${data.request.Location}</h6>
+           <h6> ${data.Location}</h6>
        </div>
        <div class="info ">
             <span>Destination:</span>
-            <h6> ${data.request.Destination}</h6>
+            <h6> ${data.Destination}</h6>
         </div>
         <div class="info ">
             <span>Notes:</span>
-            <h6>${data.request.Comment}</h6>
+            <h6>${data.Comment}</h6>
         </div>
        
         <div class="info">
         <span>Good Types:</span>
-        <h6>${data.request.GoodsType}</h6>
+        <h6>${data.GoodsType}</h6>
     </div>
     
    </div>
@@ -297,42 +485,43 @@
        </div>
                 </div>
                 `;
-                displayOffer();
-            });
-    }
+        displayOffer();
+      });
+  }
 })();
 
 function AcceptOffer(offer_id) {
-    let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
-    fetch(`${localStorage.getItem('API')}/offer-accept/${id}/${offer_id}`)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            location.href = 'http://127.0.0.1:5502/components/allOffers/allOffers.html'
-        });
+  let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
+  fetch(`${localStorage.getItem("API")}/offer-accept/${id}/${offer_id}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      location.href = "http://127.0.0.1:5502/components/allOffers/allOffers.html";
+    });
 }
 function displayOffer() {
-    let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
-    fetch(`${localStorage.getItem('API')}/requests/${id}`)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            if (data.request.ACCEPT == 1) displayAcceptWithProcess(data.request.ACCEPT_ID);
-            else GetOffers();
-        });
+  let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
+  fetch(`${localStorage.getItem("API")}/requests/${id}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      if (data.request.ACCEPT == 1) displayAcceptWithProcess(data.request.ACCEPT_ID);
+      else GetOffers();
+    });
 }
 function displayAcceptWithProcess(offer_id) {
-    fetch(`${localStorage.getItem('API')}/offers/${offer_id}`)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            let cartoona = "";
-            cartoona += `
+  fetch(`${localStorage.getItem("API")}/offers/${offer_id}`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      let cartoona = "";
+      cartoona += `
                 <div class="col-lg-6">
             <div class="cardReq pt-3 mt-4 rounded-4">
                 <div class="text text-center pb-4">
@@ -369,10 +558,13 @@ function displayAcceptWithProcess(offer_id) {
                             <h5>${data.THC}.00$</h5>
 
                         </div>
-                        <div class="d-flex req">
+                      <div class="d-flex req">
                             <span>Name:</span>
-                            <h5>${data.agent.shipping_companies.Name}</h5>
-
+                            <h5>
+                            <a href="http://127.0.0.1:5502/components/searchProfile/searchProfile.html?id=${offer_id};" style="color:white">
+                            ${data.agent.shipping_companies.Name}
+                            </a>
+                            </h5>
                         </div>
                         
                         <div class="d-flex req">
@@ -422,25 +614,25 @@ function displayAcceptWithProcess(offer_id) {
             </div>
         </div>
                 `;
-            document.getElementById("AllOffers").innerHTML = cartoona;
-        });
+      document.getElementById("AllOffers").innerHTML = cartoona;
+    });
 }
 function Goto_Process() {
-    location.href = "http://127.0.0.1:5502/components/processUser/procsessUser.html";
+  location.href = "http://127.0.0.1:5502/components/processUser/procsessUser.html";
 }
 function GetOffers() {
-    fetch(`${localStorage.getItem('API')}/offersNotAccept`)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            let cartoona = ``;
-            let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
-            for (let i = 0; i < data.length; i++) {
-                console.log(data[i].id);
-                if (data[i].request_id == id)
-                    cartoona += `
+  fetch(`${localStorage.getItem("API")}/offersNotAccept`)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      let cartoona = ``;
+      let { id } = JSON.parse(localStorage.getItem("CurrentReq"));
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i].id);
+        if (data[i].request_id == id)
+          cartoona += `
                 <div class="col-lg-6">
             <div class="cardReq pt-3 mt-4 rounded-4">
                 <div class="text text-center pb-4">
@@ -479,8 +671,11 @@ function GetOffers() {
                         </div>
                         <div class="d-flex req">
                             <span>Name:</span>
-                            <h5>${data[i].agent.shipping_companies.Name}</h5>
-
+                            <h5>
+                            <a href="http://127.0.0.1:5502/components/searchProfile/searchProfile.html?id=${i + 1};" style="color:white">
+                            ${data[i].agent.shipping_companies.Name}
+                            </a>
+                            </h5>
                         </div>
                         
                         <div class="d-flex req">
@@ -533,7 +728,7 @@ function GetOffers() {
             </div>
         </div>
                 `;
-            }
-            document.getElementById("AllOffers").innerHTML = cartoona;
-        });
+      }
+      document.getElementById("AllOffers").innerHTML = cartoona;
+    });
 }

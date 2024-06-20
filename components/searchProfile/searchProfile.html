@@ -1,172 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/style.css" />
 
     <title>Search Profile</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- profile header section -->
-    <div class="containerr sticky-top ">
-        <div class="profile-card">
-            <div class="profile-header">
-                <div class="main-profile">
-                    <div class="profile-image"></div>
-                    <div class="profile-names">
-                        <h2 class="username" id="Namee"></h2>
-                        <small class="page-title" id="Track"></small>
-                        <div class="info ">
-                            <div class="stars" id="Stars-Avg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="containerr sticky-top">
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="main-profile">
+            <div class="profile-image"></div>
+            <div class="profile-names">
+              <h2 class="username" id="Namee"></h2>
+              <small class="page-title" id="Track"></small>
+              <div class="info">
+                <div class="stars" id="Stars-Avg"></div>
+              </div>
             </div>
-            <div class="profile-body"><!-- profile body section -->
-                <div class="profile-actions">
-                    <!-- <button onclick="EDIT()" class="follow" style="cursor: pointer;"><i class="fa-solid fa-pen"></i>Edit
+          </div>
+        </div>
+        <div class="profile-body">
+          <!-- profile body section -->
+          <div class="profile-actions">
+            <!-- <button onclick="EDIT()" class="follow" style="cursor: pointer;"><i class="fa-solid fa-pen"></i>Edit
                         Profile</button> -->
-                    <a class="pe-4" href="http://127.0.0.1:5501/components/home/index.html" id="HOME">
-                        <button class="message w-100">Home</button>
-                    </a>
-                    <a class="pe-4 d-none" id="SaveEdit">
-                        <button class="message w-100" style="cursor: pointer;" onclick="SAVE()">Save
-                            Edit</button>
-                    </a>
-                    <div class="feed-data">
-                        <button class="feedback " style="cursor: pointer; width: 93%;" onclick="FeedBack()">FeedBack
-                        </button>
-                        <div class="feed d-none" id="ShowFeed"
-                            style="background-color: var(--secondary-bg); color: #fff; border-radius: 10px; padding: 18px; margin: 23px 0; width: 348px; height: 500px; overflow: scroll;     scrollbar-color: #58585d #2c2e23;">
-                            <span>Name</span>
-                            <div class="info ">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
-                                    <i class="fa-regular fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <p style="    border-bottom: 1px solid var(--accent-color);;
-                            padding: 15px 2px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-                                quidem totam
-                                delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id
-                                cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!</p>
-
-                            <!--  -->
-                            <span>Name</span>
-                            <div class="info ">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
-                                    <i class="fa-regular fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <p style="    border-bottom: 1px solid var(--accent-color);;
-                            padding: 15px 2px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-                                quidem totam
-                                delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id
-                                cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!</p>
-
-                            <span>Name</span>
-                            <div class="info ">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
-                                    <i class="fa-regular fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <p style="    border-bottom: 1px solid var(--accent-color);;
-                                padding: 15px 2px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Voluptatum
-                                quidem totam
-                                delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id
-                                cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!</p> <span>Name</span>
-                            <div class="info ">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
-                                    <i class="fa-regular fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <p style="    border-bottom: 1px solid var(--accent-color);;
-                                    padding: 15px 2px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Voluptatum
-                                quidem totam
-                                delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id
-                                cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!</p> <span>Name</span>
-                            <div class="info ">
-                                <div class="stars">
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star text-warning"></i>
-                                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
-                                    <i class="fa-regular fa-star text-warning"></i>
-                                </div>
-                            </div>
-                            <p style="    border-bottom: 1px solid var(--accent-color);;
-                                        padding: 15px 2px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Voluptatum
-                                quidem totam
-                                delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id
-                                cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!</p>
-                        </div>
-
-                    </div>
+            <a class="pe-4" href="http://127.0.0.1:5502/components/home/index.html" id="HOME">
+              <button class="message w-100">Home</button>
+            </a>
+            <a class="pe-4 d-none" id="SaveEdit">
+              <button class="message w-100" style="cursor: pointer" onclick="SAVE()">Save Edit</button>
+            </a>
+            <div class="feed-data">
+              <button class="feedback" style="cursor: pointer; width: 93%" onclick="FeedBack()">FeedBack</button>
+              <div class="feed d-none" id="ShowFeed" style="background-color: var(--secondary-bg); color: #fff; border-radius: 10px; padding: 18px; margin: 23px 0; width: 348px; height: 500px; overflow: scroll; scrollbar-color: #58585d #2c2e23">
+                <span>Name</span>
+                <div class="info">
+                  <div class="stars">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                    <i class="fa-regular fa-star text-warning"></i>
+                  </div>
                 </div>
-                <div class="account-info">
-                    <div class="data">
-                        <div class="row">
-                            <div class="col-1" id="MyDATA" style="margin: 15px 0 0 0;">
+                <p style="border-bottom: 1px solid var(--accent-color); padding: 15px 2px">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quidem totam delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!
+                </p>
 
-                            </div>
-                            <div class="col-6 " id="MyINPUTS" style="margin: 3px 0 0 0; padding: 0 0 0 70px;">
+                <!--  -->
+                <span>Name</span>
+                <div class="info">
+                  <div class="stars">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                    <i class="fa-regular fa-star text-warning"></i>
+                  </div>
+                </div>
+                <p style="border-bottom: 1px solid var(--accent-color); padding: 15px 2px">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quidem totam delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!
+                </p>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="last-post">
-                        <div class="post-cover">
-                            <span class="last-badge">Last Post</span>
-                        </div>
-                        <a>
-                            <button class="post-CTA" style="width: 63% !important; margin: 40px 0px;
-                            " onclick="LOGOUT()">Log
-                                Out</button>
-
-                        </a>
-                        <a href="../agent/agent.html" class="spe" style="display: none;" id="AddAgent">
-                            <button class="post-CTAA">Add Agent</button>
-                        </a>
-
-                    </div>
-                    <div class="daata d-none" id="ShippingOnly">
-                        <div class="important-data py-3">
-                            <section class="data-item">
-                                <h3 class="value" id="TotalFeedback">0</h3>
-                                <small class="title">FeedBack</small>
-                            </section>
-                            <section class="data-item">
-                                <h3 class="value">0</h3>
-                                <small class="title">Total Offers</small>
-                            </section>
-                            <section class="data-item">
-                                <h3 class="value" id="TotalRate">0</h3>
-                                <small class="title">Total Rate</small>
-                            </section>
-                        </div>
-                        <!-- <div class="other-data">
+                <span>Name</span>
+                <div class="info">
+                  <div class="stars">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                    <i class="fa-regular fa-star text-warning"></i>
+                  </div>
+                </div>
+                <p style="border-bottom: 1px solid var(--accent-color); padding: 15px 2px">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quidem totam delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!
+                </p>
+                <span>Name</span>
+                <div class="info">
+                  <div class="stars">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                    <i class="fa-regular fa-star text-warning"></i>
+                  </div>
+                </div>
+                <p style="border-bottom: 1px solid var(--accent-color); padding: 15px 2px">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quidem totam delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!
+                </p>
+                <span>Name</span>
+                <div class="info">
+                  <div class="stars">
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star-half-stroke text-warning"></i>
+                    <i class="fa-regular fa-star text-warning"></i>
+                  </div>
+                </div>
+                <p style="border-bottom: 1px solid var(--accent-color); padding: 15px 2px">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quidem totam delectus ut nobis unde alias veritatis. Asperiores, at necessitatibus amet ea id cupiditate sint aliquid eaque perspiciatis! Vero, adipisci!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="account-info">
+            <div class="data">
+              <div class="row">
+                <div class="col-12" id="MyDATA" style="margin: 15px 0 0 0"></div>
+                <div class="col-6" id="MyINPUTS" style="margin: 3px 0 0 0; padding: 0 0 0 70px"></div>
+              </div>
+            </div>
+            <div class="last-post">
+              <div class="post-cover">
+                <span class="last-badge">Last Post</span>
+              </div>
+              <a>
+                <button class="post-CTA" style="width: 63% !important; margin: 40px 0px" onclick="LOGOUT()">Log Out</button>
+              </a>
+              <a href="../agent/agent.html" class="spe" style="display: none" id="AddAgent">
+                <button class="post-CTAA">Add Agent</button>
+              </a>
+            </div>
+            <div class="daata d-none" id="ShippingOnly">
+              <div class="important-data py-3">
+                <section class="data-item">
+                  <h3 class="value" id="TotalFeedback">0</h3>
+                  <small class="title">FeedBack</small>
+                </section>
+                <section class="data-item">
+                  <h3 class="value">0</h3>
+                  <small class="title" id="TotalOffer">Total Offers</small>
+                </section>
+                <section class="data-item">
+                  <h3 class="value" id="TotalRate">0</h3>
+                  <small class="title" id="TotalRate">Total Rate</small>
+                </section>
+              </div>
+              <!-- <div class="other-data">
                             <section class="data-item">
                                 <h3 class="value">0</h3>
                                 <small class="title">Total Order</small>
@@ -180,16 +156,14 @@
                                 <small class="title">FeedBack</small>
                             </section>
                         </div> -->
-                    </div>
-
-                </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- profile header section -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="../../JS/main.js"></script>
-</body>
-
+  </body>
 </html>
