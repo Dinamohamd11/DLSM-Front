@@ -65,7 +65,8 @@
             return response.json();
           })
           .then((Newdata) => {
-            document.getElementById("TotalOffer").innerText = Newdata;
+            console.log(Newdata);
+            document.getElementById("TotalOffer").innerText = Newdata[0].offer_count;
           });
       }
     });

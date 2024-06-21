@@ -486,6 +486,39 @@
                 </div>
                 `;
         displayOffer();
+        data = data.request;
+        Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+        document.getElementById("NameRequest").innerText = "DHL Request";
+        document.getElementById("HeaderRequest").innerHTML = `    
+        <div class="col-lg-6 ps-5">
+
+       <div class="info ">
+           <span>Location:</span>
+           <h6> ${data.Location}</h6>
+       </div>
+       <div class="info ">
+            <span>Destination:</span>
+            <h6> ${data.Destination}</h6>
+        </div>
+        <div class="info ">
+            <span>Notes:</span>
+            <h6>${data.Comment}</h6>
+        </div>
+       
+        <div class="info">
+        <span>Good Types:</span>
+        <h6>${data.GoodsType}</h6>
+    </div>
+    
+   </div>
+   
+   <div class="col-lg-6">
+       <div class="imgofer">
+           <img src="../../Image/about-img-2-1.jpg">
+       </div>
+                </div>
+                `;
+        displayOffer();
       });
   }
 })();

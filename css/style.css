@@ -30,6 +30,7 @@
 @import url(pages/AllOffers.css);
 @import url(pages/process.css);
 @import url(pages/timeline.css);
+@import url(pages/report.css);
 
 /* Responsive */
 @import url(Responsive/login.css);
@@ -39,6 +40,5 @@
 @import url(Responsive/reqdhl.css);
 @import url(Responsive/index.css);
 @import url(Responsive/air.css);
-
 
 @import url(layout/top-search.css);

@@ -81,13 +81,13 @@
           let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
           document.getElementById("HeaderRequest").innerHTML = `<div class="col-lg-6 ps-5">
             <h2>International (WILD) Request</h2>
-           <div class="info ">
-               <span>Location:</span>
-               <h6> ${data.Location}</h6>
-           </div>
-           <div class="info ">
+            <div class="info ">
+                <span>Location:</span>
+                <h6> ${data.Location} (${data.Destination})</h6>
+            </div>
+            <div class="info ">
                 <span>Destination:</span>
-                <h6> ${data.Destination}</h6>
+                <h6> ${data.Location2} (${data.Destination2})</h6>
             </div>
             <div class="info ">
             <span>Weight:</span>
@@ -279,8 +279,10 @@
         if (data.request) data = data.request;
         else data = data;
 
-        document.getElementById("From").value = `${data.Country} (${data.Location})`;
-        document.getElementById("To").value = `${data.Country} (${data.Destination})`;
+        console.log(data);
+
+        document.getElementById("From").value = `${data.Location} (${data.Destination})`;
+        document.getElementById("To").value = `${data.Location2} (${data.Destination2})`;
         console.log(data);
         let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
         document.getElementById("HeaderRequest").innerHTML = `    
@@ -288,11 +290,11 @@
 
        <div class="info ">
            <span>Location:</span>
-           <h6> ${data.Location}</h6>
+           <h6> ${data.Location} (${data.Destination})</h6>
        </div>
        <div class="info ">
             <span>Destination:</span>
-            <h6> ${data.Destination}</h6>
+            <h6> ${data.Location2} (${data.Destination2})</h6>
         </div>
         <div class="info ">
            <span>Location:</span>
