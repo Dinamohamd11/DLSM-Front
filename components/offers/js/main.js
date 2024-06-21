@@ -1,24 +1,24 @@
 (function Main() {
-  document.getElementById("HeaderRequest").innerHTML;
-  let { id, TypeOfRequest } = JSON.parse(localStorage.getItem("CurrentReq"));
-  console.log(id);
-  console.log(TypeOfRequest);
-  if (TypeOfRequest == 3) {
-    // Local Request
-    fetch(`${localStorage.getItem("API")}/requests/${id}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((all) => {
-        console.log(all);
-        let data;
-        if (all.request) data = all.request;
-        else data = all;
-        console.log(data);
-        document.getElementById("From").value = `${data.Country} (${data.Location})`;
-        document.getElementById("To").value = `${data.Country} (${data.Destination})`;
-        let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
-        document.getElementById("HeaderRequest").innerHTML = `    
+    document.getElementById("HeaderRequest").innerHTML;
+    let { id, TypeOfRequest } = JSON.parse(localStorage.getItem("CurrentReq"));
+    console.log(id);
+    console.log(TypeOfRequest);
+    if (TypeOfRequest == 3) {
+        // Local Request
+        fetch(`${localStorage.getItem("API")}/requests/${id}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((all) => {
+                console.log(all);
+                let data;
+                if (all.request) data = all.request;
+                else data = all;
+                console.log(data);
+                document.getElementById("From").value = `${data.Country} (${data.Location})`;
+                document.getElementById("To").value = `${data.Country} (${data.Destination})`;
+                let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+                document.getElementById("HeaderRequest").innerHTML = `    
         <div class="col-lg-4">
         <h2>Local Request</h2>
        <div class="info ">
@@ -62,24 +62,26 @@
    
                 </div>
                 `;
-      });
-  } else if (TypeOfRequest == 2) {
-    // International
-    fetch(`${localStorage.getItem("API")}/requests/${id}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        if (data.request) data = data.request;
-        else data = data;
+            });
+    } else if (TypeOfRequest == 2) {
+        // International
+        fetch(`${localStorage.getItem("API")}/requests/${id}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                if (data.request) data = data.request;
+                else data = data;
 
-        document.getElementById("From").value = `${data.Country} (${data.Location})`;
-        document.getElementById("To").value = `${data.Country} (${data.Destination})`;
-        if (data.TypeOfInternational == 1) {
-          // WILD
-          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
-          document.getElementById("HeaderRequest").innerHTML = `<div class="col-lg-6 ps-5">
+                document.getElementById("From").value = `${data.Country} (${data.Location})`;
+                document.getElementById("To").value = `${data.Country} (${data.Destination})`;
+                if (data.TypeOfInternational == 1) {
+                    // WILD
+                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+                    document.getElementById(
+                        "HeaderRequest"
+                    ).innerHTML = `<div class="col-lg-6 ps-5">
             <h2>International (WILD) Request</h2>
             <div class="info ">
                 <span>Location:</span>
@@ -136,13 +138,13 @@
        
                     </div>
                     `;
-        } else if (data.TypeOfInternational == 2) {
-          // SEA
+                } else if (data.TypeOfInternational == 2) {
+                    // SEA
 
-          document.getElementById("From").value = `${data.Country} (${data.Location})`;
-          document.getElementById("To").value = `${data.Country} (${data.Destination})`;
-          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
-          document.getElementById("HeaderRequest").innerHTML = `    
+                    document.getElementById("From").value = `${data.Country} (${data.Location})`;
+                    document.getElementById("To").value = `${data.Country} (${data.Destination})`;
+                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+                    document.getElementById("HeaderRequest").innerHTML = `    
             <div class="col-lg-6 ps-5">
             <h2>International (SEA) Request</h2>
 
@@ -201,13 +203,13 @@
        
                     </div>
                     `;
-        } else if (data.TypeOfInternational == 3) {
-          // AIR
+                } else if (data.TypeOfInternational == 3) {
+                    // AIR
 
-          document.getElementById("From").value = `${data.Country} (${data.Location})`;
-          document.getElementById("To").value = `${data.Country} (${data.Destination})`;
-          let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
-          document.getElementById("HeaderRequest").innerHTML = `    
+                    document.getElementById("From").value = `${data.Country} (${data.Location})`;
+                    document.getElementById("To").value = `${data.Country} (${data.Destination})`;
+                    let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+                    document.getElementById("HeaderRequest").innerHTML = `    
             <div class="col-lg-6 ps-5">
             <h2>International (AIR) Request</h2>
 
@@ -266,26 +268,26 @@
        
                     </div>
                     `;
-        }
-      });
-  } else if (TypeOfRequest == 1) {
-    // Local Request
-    fetch(`${localStorage.getItem("API")}/requests/${id}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        if (data.request) data = data.request;
-        else data = data;
+                }
+            });
+    } else if (TypeOfRequest == 1) {
+        // Local Request
+        fetch(`${localStorage.getItem("API")}/requests/${id}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                if (data.request) data = data.request;
+                else data = data;
 
-        console.log(data);
+                console.log(data);
 
-        document.getElementById("From").value = `${data.Location} (${data.Destination})`;
-        document.getElementById("To").value = `${data.Location2} (${data.Destination2})`;
-        console.log(data);
-        let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
-        document.getElementById("HeaderRequest").innerHTML = `    
+                document.getElementById("From").value = `${data.Location} (${data.Destination})`;
+                document.getElementById("To").value = `${data.Location2} (${data.Destination2})`;
+                console.log(data);
+                let Safe = `<div class="info "><span>Safety:</span><h6>${data.Safety}</h6></div>`;
+                document.getElementById("HeaderRequest").innerHTML = `    
         <div class="col-lg-4">
 
        <div class="info ">
@@ -322,43 +324,43 @@
        
                 </div>
                 `;
-      });
-  }
+            });
+    }
 })();
 
 function SendOffer() {
-  let dataPost = {
-    From: document.getElementById("From").value,
-    To: document.getElementById("To").value,
-    Price: document.getElementById("Price").value,
-    TT: document.getElementById("TT").value,
-    FT: document.getElementById("FT").value,
-    OF: document.getElementById("OF").value,
-    THC: document.getElementById("THC").value,
-    PL: document.getElementById("PL").value,
-    Comment: document.getElementById("Comment").value,
-    PowerPerDay: document.getElementById("PowerPerDay").value,
-    ExtraFees: document.getElementById("ExtraFees").value,
-    CustomsPrice: document.getElementById("CustomsPrice").value,
-    TruckingPrice: document.getElementById("TruckingPrice").value,
-    request_id: JSON.parse(localStorage.getItem("CurrentReq")).id,
-    agents_id: JSON.parse(localStorage.getItem("CurrentUser")).id,
-  };
-  const apiUrl = `${localStorage.getItem("API")}/offers-create`;
-  const requestOptions = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(dataPost),
-  };
-  console.log(dataPost);
-  fetch(apiUrl, requestOptions)
-    .then((response) => {
-      console.log(response);
-      return response.json();
-    })
-    .then((data) => {
-      location.href = "http://127.0.0.1:5502/components/allRequest/allRequest.html";
-    });
+    let dataPost = {
+        From: document.getElementById("From").value,
+        To: document.getElementById("To").value,
+        Price: document.getElementById("Price").value,
+        TT: document.getElementById("TT").value,
+        FT: document.getElementById("FT").value,
+        OF: document.getElementById("OF").value,
+        THC: document.getElementById("THC").value,
+        PL: document.getElementById("PL").value,
+        Comment: document.getElementById("Comment").value,
+        PowerPerDay: document.getElementById("PowerPerDay").value,
+        ExtraFees: document.getElementById("ExtraFees").value,
+        CustomsPrice: document.getElementById("CustomsPrice").value,
+        TruckingPrice: document.getElementById("TruckingPrice").value,
+        request_id: JSON.parse(localStorage.getItem("CurrentReq")).id,
+        agents_id: JSON.parse(localStorage.getItem("CurrentUser")).id,
+    };
+    const apiUrl = `${localStorage.getItem("API")}/offers-create`;
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataPost),
+    };
+    console.log(dataPost);
+    fetch(apiUrl, requestOptions)
+        .then((response) => {
+            console.log(response);
+            return response.json();
+        })
+        .then((data) => {
+            location.href = "http://127.0.0.1:5502/components/allRequest/allRequest.html";
+        });
 }

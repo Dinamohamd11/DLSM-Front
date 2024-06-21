@@ -18,17 +18,14 @@
         </div>
                 <div class="col-lg-3">
                     <div class="logo"> <a href="../../components/home/index.html">
-                            <img src="../../Image/main-logo-light-sml-1.png">
+                            <img src="../../Image/logo_black.svg">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="list ">
                         <ul class="navbar-nav justify-content-end ">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../../components/home/index.html">Home</a>
-                            </li>
-                            <li class="nav-item dropdown">
+                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Requests
@@ -133,7 +130,7 @@
                     </div>
               <div class="col-lg-3">
                     <div class="logo"> <a href="../../components/home/index.html">
-                            <img src="../../Image/main-logo-light-sml-1.png">
+                            <img src="../../Image/logo_black.svg">
                         </a>
                     </div>
                 </div>
@@ -248,7 +245,7 @@
                     </div>
             <div class="col-lg-3">
                     <div class="logo"> <a href="../../components/home/index.html">
-                            <img src="../../Image/main-logo-light-sml-1.png">
+                            <img src="../../Image/logo_black.svg">
                         </a>
                     </div>
                 </div>
@@ -366,7 +363,7 @@
                     </div>
             <div class="col-lg-3">
                     <div class="logo"> <a href="../../components/home/index.html">
-                            <img src="../../Image/main-logo-light-sml-1.png">
+                            <img src="../../Image/logo_black.svg">
                         </a>
                     </div>
                 </div>
@@ -474,7 +471,7 @@
                     </div>
             <div class="col-lg-3">
                     <div class="logo"> <a href="../../components/home/index.html">
-                            <img src="../../Image/main-logo-light-sml-1.png">
+                            <img src="../../Image/logo_black.svg">
                         </a>
                     </div>
                 </div>
@@ -542,4 +539,4 @@ function LOGOUT() {
     location.href = "http://127.0.0.1:5502/components/login/login.html";
 }
 
-function Search(params) { }
+function Search(params) {}
