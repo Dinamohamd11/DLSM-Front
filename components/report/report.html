@@ -1,139 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/style.css" />
 
-    <title>Report</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../css/style.css" />
 
-  <body>
-    <!-- COMMON -->
-    <section class="common">
-      <div class="container">
-        <div class="text air ps-5">
-          <h2>Report</h2>
-          <ul class="d-flex p-2">
-            <li>
-              <a href="../../components/home/index.html"><span>Home</span></a>
-              <i class="fa-light fa-angles-right"></i>
-            </li>
-            <li>Report</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- </COMMON> -->
-    <div class="report py-80" style="background-color: rgb(32, 43, 51)">
-      <div class="container">
-        <div class="row">
-          <div class="report-text text-center">
-            <h2 style="color: #fff; padding: 20px 9px 5px 0">Report</h2>
-            <div class="elementor">
-              <span class="elementor-divider"></span>
-            </div>
-          </div>
-          <!-- Shipping -->
-          <div class="detalis-report text-center pt-5" style="color: #fff">
-            <div class="col-lg-12">
-              <div class="personal text-capitalize">
-                <span style="padding: 10px">Information:</span>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="shippinginfo">
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Name:</h5>
-                  <span id="name"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Rate:</h5>
-                  <span id="rate">-- (No Rating Available)</span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Email:</h5>
-                  <span id="email"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Address:</h5>
-                  <span id="address"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Feedback:</h5>
-                  <span id="feedback_count"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Website:</h5>
-                  <span id="website"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Phone:</h5>
-                  <span id="phone_number"></span>
-                </div>
-              </div>
-            </div>
+  <title>Report</title>
+</head>
 
-            <div class="col-lg-12">
-              <div class="personal text-capitalize">
-                <span style="padding: 10px">STATUS:</span>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="shippinginfo">
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Offer:</h5>
-                  <span id="offer_count"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Offer Done:</h5>
-                  <span id="offer_done">--</span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Offer Rejected:</h5>
-                  <span id="offer_rejected">--</span>
-                </div>
-
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">No of Posts:</h5>
-                  <span id="post_count"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Feedback:</h5>
-                  <span id="feedback_count"></span>
-                </div>
-                <div class="data-report d-flex">
-                  <h5 class="pe-2">Agent:</h5>
-                  <span id="agent_count"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<body>
+  <!-- COMMON -->
+  <section class="common">
+    <div class="container">
+      <div class="text air ps-5">
+        <h2>Report</h2>
+        <ul class="d-flex p-2">
+          <li>
+            <a href="../../components/home/index.html"><span>Home</span></a>
+            <i class="fa-light fa-angles-right"></i>
+          </li>
+          <li>Report</li>
+        </ul>
       </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="../../JS/main.js"></script>
-    <script src="../../JS/navbar.js"></script>
-    <script>
-      // Replace 'YOUR_API_URL' with the actual URL of your API endpoint
-      const urlParams = new URLSearchParams(window.location.search);
-      const id = urlParams.get("id");
-      fetch(`${localStorage.getItem("API")}/getShippingCompanyDetails/${id}`)
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("name").innerHTML = data.Name;
-          document.getElementById("email").innerHTML = data.Email;
-          document.getElementById("address").innerHTML = data.Address;
-          document.getElementById("website").innerHTML = data.Website;
-          document.getElementById("phone_number").innerHTML = data.PhoneNumber;
-          document.getElementById("feedback_count").innerHTML = data.number_of_feedback;
-          document.getElementById("offer_count").innerHTML = data.number_of_offers;
+  </section>
+  <!-- </COMMON> -->
+  <div class="report py-80" style="background-color: rgb(32, 43, 51)">
+    <div class="container">
+      <div class="row">
+        <div class="report-text text-center">
+          <h2 style="color: #fff; padding: 20px 9px 5px 0">Report</h2>
+          <div class="elementor">
+            <span class="elementor-divider"></span>
+          </div>
+        </div>
+        <!-- Shipping -->
+        <div class="detalis-report text-center pt-5" style="color: #fff;">
+          <!-- Personal info -->
+          <div class="col-lg-12">
+            <div class="personal text-capitalize">
+              <span style="padding: 10px;">Information:</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="shippinginfo">
+              <div class="data-report d-flex">
+                <h5>Name:</h5>
+                <span id="name">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Rate:</h5>
+                <span id="rate">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Email:</h5>
+                <span id="email">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Address:</h5>
+                <span id="address">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Feedback:</h5>
+                <span id="feedback">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Website:</h5>
+                <span id="website">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Phone:</h5>
+                <span id="phone">Dina</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="personal text-capitalize">
+              <span style="padding: 10px;">STATUS:</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="shippinginfo">
+              <div class="data-report d-flex">
+                <h5>Offer:</h5>
+                <span id="offers">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Offer Done:</h5>
+                <span id="offer-done">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>No of Posts:</h5>
+                <span id="posts">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Feedback:</h5>
+                <span id="feedback-count">Dina</span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Agent:</h5>
+                <span id="agents">Dina</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </shipping>-->
+
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="../../JS/main.js"></script>
+  <script src="../../JS/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('http://127.0.0.1:8000/api/getShippingCompanyDetails/1')
+        .then(response => response.json())
+        .then(data => {
+          const company = data[0];
+          document.getElementById('name').textContent = company.Name;
+          document.getElementById('rate').textContent = company.TotalRate ?? 0; // Display 0 if TotalRate is null
+          document.getElementById('email').textContent = company.Email;
+          document.getElementById('address').textContent = company.Address;
+          document.getElementById('feedback').textContent = company.NumberOfFeedbacks;
+          document.getElementById('website').textContent = company.Website;
+          document.getElementById('phone').textContent = company.PhoneNumber;
+          document.getElementById('offers').textContent = company.NumberOfOffers;
+          document.getElementById('offer-done').textContent = 'Data not provided'; // You can replace this with actual data if available
+          document.getElementById('offer-rejected').textContent = 'Data not provided'; // You can replace this with actual data if available
+          document.getElementById('posts').textContent = company.NumberOfPosts;
+          document.getElementById('feedback-count').textContent = company.NumberOfFeedbacks;
+          document.getElementById('agents').textContent = company.NumberOfAgents;
         })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-        });
-    </script>
-  </body>
+        .catch(error => console.error('Error fetching data:', error));
+    });
+  </script>
+
+</body>
+
 </html>
