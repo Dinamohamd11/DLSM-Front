@@ -47,31 +47,27 @@
             <div class="shippinginfo">
               <div class="data-report d-flex">
                 <h5>Name:</h5>
-                <span id="name">Dina</span>
+                <span class="ps-2" id="name"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Rate:</h5>
-                <span id="rate">Dina</span>
+                <span class="ps-2" id="rate"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Email:</h5>
-                <span id="email">Dina</span>
+                <span class="ps-2" id="email"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Address:</h5>
-                <span id="address">Dina</span>
-              </div>
-              <div class="data-report d-flex">
-                <h5>Feedback:</h5>
-                <span id="feedback">Dina</span>
+                <span class="ps-2" id="address"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Website:</h5>
-                <span id="website">Dina</span>
+                <span class="ps-2" id="website"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Phone:</h5>
-                <span id="phone">Dina</span>
+                <span class="ps-2" id="phone"></span>
               </div>
             </div>
           </div>
@@ -85,23 +81,27 @@
             <div class="shippinginfo">
               <div class="data-report d-flex">
                 <h5>Offer:</h5>
-                <span id="offers">Dina</span>
+                <span class="ps-2" id="offers"></span>
               </div>
               <div class="data-report d-flex">
-                <h5>Offer Done:</h5>
-                <span id="offer-done">Dina</span>
+                <h5>Done Offers:</h5>
+                <span class="ps-2" id="offer-done"></span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Rejected Offers:</h5>
+                <span class="ps-2" id="offer-rejected"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>No of Posts:</h5>
-                <span id="posts">Dina</span>
+                <span class="ps-2" id="posts"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Feedback:</h5>
-                <span id="feedback-count">Dina</span>
+                <span class="ps-2" id="feedback-count"></span>
               </div>
               <div class="data-report d-flex">
                 <h5>Agent:</h5>
-                <span id="agents">Dina</span>
+                <span class="ps-2" id="agents"></span>
               </div>
             </div>
           </div>
@@ -112,25 +112,23 @@
     </div>
   </div>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
   <script src="../../JS/main.js"></script>
   <script src="../../JS/navbar.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      fetch('http://127.0.0.1:8000/api/getShippingCompanyDetails/1')
+      fetch('https://dlsm.up.railway.app/api/getShippingCompanyDetails/1')
         .then(response => response.json())
         .then(data => {
-          const company = data[0];
+          const company = data;
           document.getElementById('name').textContent = company.Name;
-          document.getElementById('rate').textContent = company.TotalRate ?? 0; // Display 0 if TotalRate is null
+          document.getElementById('rate').textContent = company.TotalRate ?? 0;
           document.getElementById('email').textContent = company.Email;
           document.getElementById('address').textContent = company.Address;
-          document.getElementById('feedback').textContent = company.NumberOfFeedbacks;
           document.getElementById('website').textContent = company.Website;
           document.getElementById('phone').textContent = company.PhoneNumber;
           document.getElementById('offers').textContent = company.NumberOfOffers;
-          document.getElementById('offer-done').textContent = 'Data not provided'; // You can replace this with actual data if available
-          document.getElementById('offer-rejected').textContent = 'Data not provided'; // You can replace this with actual data if available
+          document.getElementById('offer-done').textContent = company.NumberOfAcceptedOffers;
+          document.getElementById('offer-rejected').textContent = company.NumberOfOffers - company.NumberOfAcceptedOffers;
           document.getElementById('posts').textContent = company.NumberOfPosts;
           document.getElementById('feedback-count').textContent = company.NumberOfFeedbacks;
           document.getElementById('agents').textContent = company.NumberOfAgents;
@@ -138,6 +136,7 @@
         .catch(error => console.error('Error fetching data:', error));
     });
   </script>
+
 
 </body>
 

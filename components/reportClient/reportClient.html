@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../css/style.css" />
+
+  <title>Report</title>
+</head>
+
+<body>
+  <!-- COMMON -->
+  <section class="common">
+    <div class="container">
+      <div class="text air ps-5">
+        <h2>Report</h2>
+        <ul class="d-flex p-2">
+          <li>
+            <a href="../../components/home/index.html"><span>Home</span></a>
+            <i class="fa-light fa-angles-right"></i>
+          </li>
+          <li>Report</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- </COMMON> -->
+  <div class="report py-80" style="background-color: rgb(32, 43, 51)">
+    <div class="container">
+      <div class="row">
+        <div class="report-text text-center">
+          <h2 style="color: #fff; padding: 20px 9px 5px 0">Report</h2>
+          <div class="elementor">
+            <span class="elementor-divider"></span>
+          </div>
+        </div>
+        <!-- Clients -->
+        <div class="detalis-report text-center pt-5" style="color: #fff;">
+          <!-- Personal info -->
+          <div class="col-lg-12">
+            <div class="personal text-capitalize">
+              <span style="padding: 10px;">Information:</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="data-report d-flex">
+              <h5>Name:</h5>
+              <span class="ps-2" id="name"></span>
+            </div>
+            <div class="data-report d-flex">
+              <h5>Rate:</h5>
+              <span class="ps-2" id="rate"></span>
+            </div>
+            <div class="data-report d-flex">
+              <h5>Email:</h5>
+              <span class="ps-2" id="email"></span>
+            </div>
+
+            <div class="data-report d-flex">
+              <h5>PhoneNumber:</h5>
+              <span class="ps-2" id="PhoneNumber"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="personal text-capitalize">
+              <span style="padding: 10px;">STATUS:</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="shippinginfo">
+              <div class="data-report d-flex">
+                <h5>Requests:</h5>
+                <span class="ps-2" id="requests"></span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Accepted Requests:</h5>
+                <span class="ps-2" id="accepted-requests"></span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Rejected Requests:</h5>
+                <span class="ps-2" id="rejected-requests"></span>
+              </div>
+              <div class="data-report d-flex">
+                <h5>Feedback Rate:</h5>
+                <span class="ps-2" id="feedback-rate"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </Clients>-->
+
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="../../JS/main.js"></script>
+  <script src="../../JS/navbar.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('https://dlsm.up.railway.app/api/getClientDetails/1')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          document.getElementById('name').textContent = data.Name;
+          document.getElementById('rate').textContent = data.FeedbackRate ?? 0; // Display 0 if FeedbackRate is null
+          document.getElementById('email').textContent = data.Email;
+          document.getElementById('PhoneNumber').textContent = data.PhoneNumber;
+          document.getElementById('requests').textContent = data.NumberOfRequests;
+          document.getElementById('accepted-requests').textContent = data.AcceptedRequestsCount;
+          document.getElementById('rejected-requests').textContent = data.NumberOfRequests - data.AcceptedRequestsCount;
+          document.getElementById('feedback-rate').textContent = data.FeedbackRate ?? 0;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    });
+  </script>
+  </script>
+</body>
+
+</html>
